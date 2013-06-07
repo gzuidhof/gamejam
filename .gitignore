@@ -224,3 +224,6 @@ Library/*
 Temp
 *.pidb
 Build
+
+BGJ5/Assets/UnIDE
+BGJ5/Assets/UnIDE/*
