@@ -17,10 +17,12 @@ public class BadGuy : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
         badGuys.Add(this);
-        hitpoints = Random.Range(20f, 100f);
+        hitpoints = Random.Range(15f, 40f);
         target = GameObject.FindGameObjectWithTag("Player");
 	}
 	
+
+
 	// Update is called once per frame
 	void Update () {
         //damage();
@@ -30,7 +32,7 @@ public class BadGuy : MonoBehaviour {
     public bool damage(float dmg)
     {
         hitpoints -= dmg;
-        if (hurtSound) audio.PlayOneShot(hurtSound);
+        if (hurtSound && dmg > 0.01f) audio.PlayOneShot(hurtSound);
         if (hitpoints < 0f)
         {
             AudioSource.PlayClipAtPoint(deathSound, transform.position);
@@ -43,6 +45,8 @@ public class BadGuy : MonoBehaviour {
     public void AI()
     {
         motor.movementDirection = target.transform.position - transform.position;
+        foreach (Flashlight b in Flashlight.lights)
+            motor.movementDirection += ((transform.position - b.transform.position) * b.GetAngleDamage(this) * 4f);
     }
 
 }

@@ -20,11 +20,6 @@ public class SmoothLookAtCS : MonoBehaviour {
 	}
 
 
-    void Update()
-    {
-        
-
-    }
     void LateUpdate()
     {
         if (target)
