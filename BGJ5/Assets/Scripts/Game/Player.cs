@@ -98,15 +98,22 @@ public class Player : MonoBehaviour {
 		Vector2 rs = GamePad.GetAxis(GamePad.Axis.RightStick, controllerNumber);
         return new Vector3(rs.x, 0f, rs.y) ;
 	}
-	
+
+    private Vector3 lastMousePosition;
+
 	/// <summary> 
 	/// Face direction of character (looking at mouse ray intersection).
     /// </summary> 
 	private Vector3 GetMouseFaceDirection() 
 	{
-		RaycastHit h = new RaycastHit();
-        Physics.Raycast(Camera.main.ScreenPointToRay(Input.mousePosition), out h);
-        return (h.point - transform.position).normalized;
+     //   if (lastMousePosition != Input.mousePosition)
+     //   {
+            lastMousePosition = Input.mousePosition;
+            RaycastHit h = new RaycastHit();
+            Physics.Raycast(Camera.main.ScreenPointToRay(Input.mousePosition), out h);
+            return (h.point - transform.position).normalized;
+     //   }
+     //   return Vector3.zero;
 	}
 
 
