@@ -99,7 +99,7 @@ public class Player : MonoBehaviour {
         return new Vector3(rs.x, 0f, rs.y) ;
 	}
 
-    private Vector3 lastMousePosition;
+    //private Vector3 lastMousePosition;
 
 	/// <summary> 
 	/// Face direction of character (looking at mouse ray intersection).
@@ -108,7 +108,7 @@ public class Player : MonoBehaviour {
 	{
      //   if (lastMousePosition != Input.mousePosition)
      //   {
-            lastMousePosition = Input.mousePosition;
+            //lastMousePosition = Input.mousePosition;
             RaycastHit h = new RaycastHit();
             Physics.Raycast(Camera.main.ScreenPointToRay(Input.mousePosition), out h);
             return (h.point - transform.position).normalized;
