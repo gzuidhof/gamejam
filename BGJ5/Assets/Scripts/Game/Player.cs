@@ -15,11 +15,22 @@ public class Player : MonoBehaviour {
         Keyboard = 5,
     }
 
-    public const string KEYBOARD_POSITIVE = "enter";
+    public const string KEYBOARD_POSITIVE = "space";
     public const string KEYBOARD_NEGATIVE = "escape";
 
     public int playerNumber = -1;
     public ControlScheme controlScheme;
+
+
+    public void Respawn()
+    {
+        transform.position = Checkpoint.currentRespawn;
+        rigidbody.velocity = Vector3.zero;
+    }
+
+
+
+
 
     public void changeControlScheme() //Cycle through control schemes.
     {
@@ -133,6 +144,26 @@ public class Player : MonoBehaviour {
 		}
         return false;
     }
+
+    public bool GetPositiveButtonDown()
+    {
+        if ((int)controlScheme >= 1 && (int)controlScheme < 5)
+        {
+            return GamePad.GetButtonDown(GamePad.Button.A, (int)controlScheme);
+        }
+        else if (controlScheme == ControlScheme.Keyboard)
+        {
+            return Input.GetKeyDown(KEYBOARD_POSITIVE);
+        }
+        else if (controlScheme == ControlScheme.Unspecified)
+        {
+            return Input.GetKeyDown(KEYBOARD_POSITIVE) || GamePad.GetButtonDown(GamePad.Button.A, 1);
+        }
+        return false;
+    }
+
+
+
     public bool GetNegativeButton()
     {
         if ((int)controlScheme >= 1 && (int)controlScheme < 5)

@@ -28,6 +28,9 @@ public class FreeMovementMotor : MovementMotor
 		if (faceDir == Vector3.zero) {
 			rigidbody.angularVelocity = Vector3.zero;
 		}
+
+
+
 		else {
 			float rotationAngle = AngleAroundAxis (transform.forward, faceDir, Vector3.up);
 			rigidbody.angularVelocity = (Vector3.up * rotationAngle * turningSmoothing);

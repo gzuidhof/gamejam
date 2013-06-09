@@ -34,7 +34,7 @@ public class PlayerMovementController : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-
+             
             if (Input.GetKeyDown("p"))
                 player.changeControlScheme();
 
@@ -45,7 +45,11 @@ public class PlayerMovementController : MonoBehaviour {
             screenMovementRight = screenMovementSpace * Vector3.right;
 
             motor.movementDirection = player.GetHorizontalInput() * screenMovementRight + player.GetVerticalInput() * screenMovementForward;
-            motor.facingDirection = player.GetFaceDirection();
+            
+            if (player.controlScheme == Player.ControlScheme.Keyboard) 
+                motor.facingDirection = player.GetFaceDirection();
+            else
+                motor.facingDirection = player.GetFaceDirection().x * screenMovementRight + player.GetFaceDirection().z * screenMovementForward;
 
             if (motor.movementDirection.sqrMagnitude > 1)
                 motor.movementDirection.Normalize();

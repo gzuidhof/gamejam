@@ -5,19 +5,20 @@ using System.Collections.Generic;
 public class Flashlight : MonoBehaviour {
 
     private Light light;
+    private GameObject player;
 
     public static List<Flashlight> lights = new List<Flashlight>();
 
-    public bool spin = false;
-    public Vector3 spinAxis = new Vector3(0,1,0);
-    public float spinSpeed = 5f;
-    public float spinAngle = 45f;
+
 
     public bool on = true;
 
     public AudioClip alarmSound;
 
-
+    public bool spin = false;
+    public Vector3 spinAxis = new Vector3(0, 1, 0);
+    public float spinSpeed = 5f;
+    public float spinAngle = 45f;
     private float currentSpin = 0f;
     private bool spinDir = true;
 
@@ -26,24 +27,41 @@ public class Flashlight : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
         light = (Light) GetComponentInChildren<Light>();
+        player = GameObject.FindGameObjectWithTag("Player");
         lights.Add(this);
         if (!on) light.enabled = false;
 	}
+
+    public void Toggle(bool set)
+    {
+
+        if (set)
+        {
+            light.enabled = true;
+            on = true;
+        }
+        else
+        {
+            light.enabled = false;
+            on = false;
+        }
+    }
+
 
     public void ToggleLight()
     {
         if (on)
         {
-            light.enabled = false;
-            on = false;
+            Toggle(false);
         }
         else
         {
-            light.enabled = true;
-            on = true;
+            Toggle(true);
         }
     }
 
+
+    
 
     void SpinFlashlight()
     {
@@ -76,16 +94,30 @@ public class Flashlight : MonoBehaviour {
         if (on) CheckForPlayer();
         if (spin && on) SpinFlashlight();
 
-        if (Input.GetKeyDown("q")) ToggleLight();
-
 	}
+
+    float checkTime = 0f;
 
 
     //Checks for player with a ton of raycasts and plays a sound when in alarm light.
     public void CheckForPlayer()
     {
         alarmAmount = 0;
+        checkTime += Time.deltaTime;
 
+        if (checkTime > 0.18f)
+        {
+            checkTime = 0f;
+        }
+        else
+            return;
+
+
+        if ( ! (Vector3.Angle(transform.forward, player.transform.position - transform.position) < light.spotAngle / 1.5f 
+            && Vector3.Distance(light.transform.position, player.transform.position) < light.range))
+        {
+            return;
+        }
 
         for (float f = 0.15f; f <= 0.85f; f += 0.05f)
         {
@@ -94,19 +126,23 @@ public class Flashlight : MonoBehaviour {
                 Vector3 dir = (light.transform.forward + GetHorizontalSliceVector(light.spotAngle, f) + GetVerticalSliceVector(light.spotAngle, f2)) * light.range * 0.8f;
 
                 //if (Vector3.Angle(light.transform.forward, dir) < light.spotAngle / 2f)
-                //     Debug.DrawRay(light.transform.position, dir);
+                     
 
                 if (Vector3.Angle(light.transform.forward, dir) < light.spotAngle / 2f)
                 {
+                  //  Debug.DrawRay(light.transform.position, dir);
                     Ray r = new Ray(light.transform.position, dir);
                     RaycastHit hit = new RaycastHit();
                     if (Physics.Raycast(r, out hit))
                     {
-                        if (hit.rigidbody)
+                        if (hit.rigidbody && hit.transform.tag == "Player")
                         {
                             alarmAmount++;
                             if (alarmAmount < 2)
+                            {
                                 AudioSource.PlayClipAtPoint(alarmSound, transform.position);
+                                GameManager.instance.RaiseAlarm();
+                            }
                             // Debug.Log(hit.rigidbody.name);
                         }
                     }

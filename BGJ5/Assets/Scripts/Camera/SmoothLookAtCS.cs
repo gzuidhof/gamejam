@@ -8,8 +8,12 @@ public class SmoothLookAtCS : MonoBehaviour {
     public bool smooth  = true;
 
     private Vector3 wantedOffset;
+    public float overviewOffset = 2.5f;
 
     public Vector3 goalPosition;
+    public bool overview = false;
+    
+
     public float positionDamping = 1F;
 
 	// Use this for initialization
@@ -22,11 +26,16 @@ public class SmoothLookAtCS : MonoBehaviour {
 
     void LateUpdate()
     {
-        if (target)
+        overview = false;
+        if (Input.GetKey(KeyCode.C) || GamePad.GetButton(GamePad.Button.X, 1)) overview = true;
+
+        if (target )
         {
             if (smooth)
             {
-                Quaternion rotation = Quaternion.LookRotation(target.position - transform.position);
+                Quaternion rotation;
+                //if (overview) rotation = Quaternion.LookRotation(new Vector3(0,-1,0.01f));
+                rotation = Quaternion.LookRotation(target.position - transform.position);
                 transform.rotation = Quaternion.Slerp(transform.rotation, rotation, Time.deltaTime * damping);
             }
             else
@@ -34,7 +43,11 @@ public class SmoothLookAtCS : MonoBehaviour {
                 transform.LookAt(target);
             }
         }
-        goalPosition = target.position + wantedOffset;
+
+        if (overview) 
+            goalPosition = target.position + wantedOffset*overviewOffset;
+        else goalPosition = target.position + wantedOffset;
+
         if (goalPosition != Vector3.zero)
         {
             transform.position = (goalPosition);//, goalPosition, Time.deltaTime * positionDamping);
