@@ -36,7 +36,7 @@ public class PlayerMovementController : MonoBehaviour {
 	void Update () {
              
             if (Input.GetKeyDown("p"))
-                player.changeControlScheme();
+                player.swapControlScheme();
 
             //Handle movement
 

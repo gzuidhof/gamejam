@@ -24,14 +24,17 @@ public class Player : MonoBehaviour {
 
     public void Respawn()
     {
-        transform.position = Checkpoint.currentRespawn;
+        Vector3 resPos = Checkpoint.currentRespawn;
+        if (resPos == Vector3.zero) 
+            resPos = GameManager.GetDefaultRespawn();
+        transform.position = resPos;
         rigidbody.velocity = Vector3.zero;
     }
 
 
 
 
-
+    
     public void changeControlScheme() //Cycle through control schemes.
     {
         if ((int)controlScheme == 5)
@@ -43,6 +46,20 @@ public class Player : MonoBehaviour {
             controlScheme = (ControlScheme)((int)controlScheme + 1);
         }
     }
+
+    public void swapControlScheme() //Only switch between keyboard and X360_1
+    {
+        
+        if (controlScheme == ControlScheme.Keyboard)
+        {
+            controlScheme = ControlScheme.XBOX360_1;
+        }
+        else 
+        {
+            controlScheme = ControlScheme.Keyboard;
+        }
+    }
+
 
     public float GetHorizontalInput()
     {

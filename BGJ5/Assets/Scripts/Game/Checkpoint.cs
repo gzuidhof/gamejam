@@ -5,7 +5,7 @@ using System.Collections;
 public class Checkpoint : MonoBehaviour {
 
     public static int furthest = 0;
-    public static Vector3 currentRespawn = new Vector3(-5f, 0f,25f) ;
+    public static Vector3 currentRespawn = Vector3.zero;
 
     public int num;
 
