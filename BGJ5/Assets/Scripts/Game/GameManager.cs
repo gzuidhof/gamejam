@@ -41,7 +41,7 @@ public class GameManager : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-        if (playerScript.GetNegativeButton()) 
+        if (playerScript.GetNegativeButtonDown()) 
             alarmLevel = 1.5f;
 
         if (playerInvincible) return;

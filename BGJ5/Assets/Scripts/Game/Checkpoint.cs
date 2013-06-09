@@ -32,8 +32,10 @@ public class Checkpoint : MonoBehaviour {
     {
         p.transform.position = transform.position;
         p.rigidbody.velocity = Vector3.zero;
+        audio.Play();
         foreach (ResetTriggerBlock b in resetTriggerBlocks)
         {
+
             b.Reset();
         }
     }

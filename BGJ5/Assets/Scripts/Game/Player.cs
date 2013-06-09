@@ -206,6 +206,23 @@ public class Player : MonoBehaviour {
         return false;
     }
 
+    public bool GetNegativeButtonDown()
+    {
+        if ((int)controlScheme >= 1 && (int)controlScheme < 5)
+        {
+            return GamePad.GetButtonDown(GamePad.Button.B, (int)controlScheme);
+        }
+        else if (controlScheme == ControlScheme.Keyboard)
+        {
+            return Input.GetKeyDown(KEYBOARD_NEGATIVE);
+        }
+        else if (controlScheme == ControlScheme.Unspecified)
+        {
+            return Input.GetKeyDown(KEYBOARD_NEGATIVE) || GamePad.GetButtonDown(GamePad.Button.B, 1);
+        }
+        return false;
+    }
+
 	/// <summary> 
 	/// Positive button as a float
     /// </summary> 

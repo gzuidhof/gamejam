@@ -7,23 +7,32 @@ public class PressurePlate : MonoBehaviour {
     public bool inversed = false;
 
     float checkTime = 0f;
+    public float amountInTrigger = 0;
+
+    public AudioClip enterSound;
+    public AudioClip exitSound;
 
 
     void OnTriggerEnter(Collider c)
     {
-        if (c.rigidbody && c.gameObject.tag == "TriggerBlock" /*|| c.gameObject.tag == "Player"*/)
+        if (c.rigidbody && c.gameObject.tag == "TriggerBlock" || c.gameObject.tag == "Player")
         {
+            amountInTrigger++;
             Debug.Log("YA");
             light.Toggle(!inversed);
+            AudioSource.PlayClipAtPoint(enterSound, transform.position, 0.4f);
         }
 
     }
 
     void OnTriggerExit(Collider c)
     {
-        if (c.rigidbody && c.gameObject.tag == "TriggerBlock" /*|| c.gameObject.tag == "Player"*/)
+        if (c.rigidbody && c.gameObject.tag == "TriggerBlock" || c.gameObject.tag == "Player")
         {
-            light.Toggle(inversed);
+            amountInTrigger--;
+            if (amountInTrigger==0)
+                light.Toggle(inversed);
+            AudioSource.PlayClipAtPoint(exitSound, transform.position);
         }
 
     }
@@ -44,8 +53,11 @@ public class PressurePlate : MonoBehaviour {
 
         Debug.DrawRay(transform.position, transform.up);
 
-        if (Physics.Raycast(transform.position, transform.up, out h, 1f))
+        if (Physics.Raycast(transform.position, transform.up, out h, 0.5f))
+        {
+            Debug.Log("HIT");
             light.Toggle(!inversed);
+        }
         else
             light.Toggle(inversed);
     }
