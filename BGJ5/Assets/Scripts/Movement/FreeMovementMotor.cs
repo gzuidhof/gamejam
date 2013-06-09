@@ -12,7 +12,7 @@ public class FreeMovementMotor : MovementMotor
 
 	void FixedUpdate() 
 	{
-		Vector3 targetVelocity = movementDirection * walkingSpeed;
+		Vector3 targetVelocity = movementDirection.normalized * walkingSpeed;
 		Vector3 deltaVelocity = targetVelocity - rigidbody.velocity;
 		
 		//if (rigidbody.useGravity) Noh jumps

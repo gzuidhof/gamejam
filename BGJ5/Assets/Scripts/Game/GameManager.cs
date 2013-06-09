@@ -19,6 +19,11 @@ public class GameManager : MonoBehaviour {
     private Color baseColor;
     public bool playerInvincible = false;
 
+    public AudioSource introMusic;
+    public AudioSource music;
+    public TextMesh deathCountText;
+    public int deathCount = 0;
+
 
 	// Use this for initialization
 	void Start () {
@@ -57,6 +62,8 @@ public class GameManager : MonoBehaviour {
         {
             alarmLevel = 0;
             playerOverheadLight.color = baseColor;
+            deathCount++;
+            deathCountText.text = "DEATHS: " + deathCount;
             playerScript.Respawn();
         }
 	}
@@ -64,15 +71,21 @@ public class GameManager : MonoBehaviour {
     public void EasyMode()
     {
         easyLight.enabled = true;
+        introMusic.Stop();
+        music.Play();
         playerScript.Respawn();
     }
     public void NormalMode()
     {
+        introMusic.Stop();
+        music.Play();
         playerScript.Respawn();
 
     }
     public void HardMode()
     {
+        introMusic.Stop();
+        music.Play();
         playerLight.SetActive(false);// = false;
         baseColor = baseColor / 3f;
         playerOverheadLight.color = baseColor;

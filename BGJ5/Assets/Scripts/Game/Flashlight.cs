@@ -148,6 +148,25 @@ public class Flashlight : MonoBehaviour {
 
             }
         }
+
+        if (GameManager.instance.GetComponent<BadGuySpawner>().enabled)
+        {
+            /* LEGACY code, to hurt bad guys. */
+            for(int i = 0; i < BadGuy.badGuys.Count; i++ )//BadGuy b in BadGuy.badGuys)
+            {
+                BadGuy b = BadGuy.badGuys[i];
+                float dmg = GetAngleDamage(b);
+
+                    if (((BadGuy)b.GetComponent<BadGuy>()).damage(dmg)) //If died b/c of dmg
+                    {
+                        BadGuy.badGuys.Remove(b);
+                        i--;
+                    }
+
+            }
+        }
+
+
     }
 
 

@@ -5,17 +5,23 @@ public class BadGuySpawner : MonoBehaviour {
 
     public GameObject badGuyPrefab;
 
-	// Use this for initialization
-	void Start () {
-	
-	}
-
-
 	// Update is called once per frame
+
+
+    private float t;
+    private float max = 20;
+
 	void Update () {
-        if (BadGuy.badGuys.Count < 10)
+        t += Time.deltaTime;
+        if (t > 1f)
+        {
+            t = 0;
+            max++;
+        }
+        if (BadGuy.badGuys.Count < max)
         {
             Instantiate(badGuyPrefab);
         }
+            
 	}
 }
