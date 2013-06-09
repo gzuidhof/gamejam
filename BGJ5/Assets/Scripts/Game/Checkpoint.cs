@@ -4,10 +4,13 @@ using System.Collections;
 [RequireComponent (typeof(AudioSource))]
 public class Checkpoint : MonoBehaviour {
 
-    public static int furthest = 0;
-    public static Vector3 currentRespawn = Vector3.zero;
+    public static float furthest = 0;
+    public static Checkpoint currentRespawn = null;
 
-    public int num;
+    public ResetTriggerBlock[] resetTriggerBlocks;
+
+
+    public float num;
 
 
 
@@ -20,9 +23,20 @@ public class Checkpoint : MonoBehaviour {
                 Debug.Log("Checkpoint set! num: " + num);
                 furthest = num;
                 audio.Play();
-                currentRespawn = transform.position;
+                currentRespawn = this;
             }
         }
     }
+
+    public void Respawn(Player p)
+    {
+        p.transform.position = transform.position;
+        p.rigidbody.velocity = Vector3.zero;
+        foreach (ResetTriggerBlock b in resetTriggerBlocks)
+        {
+            b.Reset();
+        }
+    }
+
 
 }

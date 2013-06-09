@@ -96,41 +96,39 @@ public class Flashlight : MonoBehaviour {
 
 	}
 
-    float checkTime = 0f;
-
+    private float checkTime = 0f;
 
     //Checks for player with a ton of raycasts and plays a sound when in alarm light.
+    //also increases alarm level.
     public void CheckForPlayer()
     {
         alarmAmount = 0;
         checkTime += Time.deltaTime;
 
-        if (checkTime > 0.18f)
+        if (checkTime > 0.13f) //Checking at max every 0.18 sec
         {
             checkTime = 0f;
         }
         else
             return;
 
-
+        //Is within a reasonable angle with the light and within range, else return.
         if ( ! (Vector3.Angle(transform.forward, player.transform.position - transform.position) < light.spotAngle / 1.5f 
             && Vector3.Distance(light.transform.position, player.transform.position) < light.range))
         {
             return;
         }
 
-        for (float f = 0.15f; f <= 0.85f; f += 0.05f)
+
+        for (float f = 0.15f; f <= 0.85f; f += 0.05f) //horizontal
         {
-            for (float f2 = 0.15f; f2 <= 0.85f; f2 += 0.05f)
+            for (float f2 = 0.15f; f2 <= 0.85f; f2 += 0.05f) //vertical
             {
                 Vector3 dir = (light.transform.forward + GetHorizontalSliceVector(light.spotAngle, f) + GetVerticalSliceVector(light.spotAngle, f2)) * light.range * 0.8f;
 
-                //if (Vector3.Angle(light.transform.forward, dir) < light.spotAngle / 2f)
-                     
-
                 if (Vector3.Angle(light.transform.forward, dir) < light.spotAngle / 2f)
                 {
-                  //  Debug.DrawRay(light.transform.position, dir);
+                   // Debug.DrawRay(light.transform.position, dir);
                     Ray r = new Ray(light.transform.position, dir);
                     RaycastHit hit = new RaycastHit();
                     if (Physics.Raycast(r, out hit))
@@ -138,12 +136,12 @@ public class Flashlight : MonoBehaviour {
                         if (hit.rigidbody && hit.transform.tag == "Player")
                         {
                             alarmAmount++;
-                            if (alarmAmount < 2)
+                            if (alarmAmount < 2) //Only 1 hit per light allowed, why didn't I use a boolean? :/
                             {
                                 AudioSource.PlayClipAtPoint(alarmSound, transform.position);
                                 GameManager.instance.RaiseAlarm();
                             }
-                            // Debug.Log(hit.rigidbody.name);
+                            //Debug.Log(hit.rigidbody.name);
                         }
                     }
                 }

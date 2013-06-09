@@ -24,11 +24,19 @@ public class Player : MonoBehaviour {
 
     public void Respawn()
     {
-        Vector3 resPos = Checkpoint.currentRespawn;
-        if (resPos == Vector3.zero) 
-            resPos = GameManager.GetDefaultRespawn();
-        transform.position = resPos;
-        rigidbody.velocity = Vector3.zero;
+        Checkpoint resPos = Checkpoint.currentRespawn;
+
+
+        if (resPos == null)
+        {
+            transform.position = GameManager.GetDefaultRespawn();
+            rigidbody.velocity = Vector3.zero;
+        }
+        else
+        {
+            resPos.Respawn(this);
+        }
+        
     }
 
 

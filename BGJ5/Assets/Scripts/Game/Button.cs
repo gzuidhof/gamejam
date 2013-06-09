@@ -5,6 +5,7 @@ public class Button : MonoBehaviour {
 
     public float range = 5f;
     public Flashlight[] lights;
+    public bool spinButton = false;
 
     private GameObject player;
     private Player playerScript;
@@ -17,13 +18,30 @@ public class Button : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-
-        if (playerScript.GetPositiveButtonDown() && 
-            Vector3.Distance(player.transform.position,transform.position) < range)
+        if (!spinButton)
         {
-            foreach (Flashlight l in lights) {
-                l.ToggleLight();
+            if (playerScript.GetPositiveButtonDown() &&
+                Vector3.Distance(player.transform.position, transform.position) < range)
+            {
+                if (audio) audio.Play();
+                foreach (Flashlight l in lights)
+                {
+                    l.ToggleLight();
+                }
             }
-        } 
+        }
+        else
+        {
+            if (playerScript.GetPositiveButtonDown() &&
+                Vector3.Distance(player.transform.position, transform.position) < range)
+            {
+                if (audio) audio.Play();
+                foreach (Flashlight l in lights)
+                {
+                    l.spin = !l.spin;
+                }
+            }
+        }
+
 	}
 }

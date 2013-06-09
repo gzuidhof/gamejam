@@ -11,8 +11,9 @@ public class PressurePlate : MonoBehaviour {
 
     void OnTriggerEnter(Collider c)
     {
-        if (c.rigidbody && c.gameObject.tag == "TriggerBlock" || c.gameObject.tag == "Player")
+        if (c.rigidbody && c.gameObject.tag == "TriggerBlock" /*|| c.gameObject.tag == "Player"*/)
         {
+            Debug.Log("YA");
             light.Toggle(!inversed);
         }
 
@@ -20,7 +21,7 @@ public class PressurePlate : MonoBehaviour {
 
     void OnTriggerExit(Collider c)
     {
-        if (c.rigidbody && c.gameObject.tag == "TriggerBlock" || c.gameObject.tag == "Player")
+        if (c.rigidbody && c.gameObject.tag == "TriggerBlock" /*|| c.gameObject.tag == "Player"*/)
         {
             light.Toggle(inversed);
         }

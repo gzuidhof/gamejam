@@ -41,6 +41,9 @@ public class GameManager : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
+        if (playerScript.GetNegativeButton()) 
+            alarmLevel = 1.5f;
+
         if (playerInvincible) return;
         if (alarmLevel > 0.1f)
         {
@@ -71,6 +74,8 @@ public class GameManager : MonoBehaviour {
     public void HardMode()
     {
         playerLight.SetActive(false);// = false;
+        baseColor = baseColor / 3f;
+        playerOverheadLight.color = baseColor;
         playerScript.Respawn();
     }
 
