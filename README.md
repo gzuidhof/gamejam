@@ -1,4 +1,1 @@
-DropTheGoat
-===========
-
-BaconGameJam 5 team (48hr game creation jam)
+Gamejam repository. Currently only containing "Shadow Infiltration" from the BaconGameJam 5 (48hr game creation contest).
