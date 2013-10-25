@@ -3,7 +3,7 @@ using System.Collections;
 
 public class PlayerMovementController : MonoBehaviour {
 
-    public PlayerInput player;
+    public PlayerInput input;
     public Transform character;
     public MovementMotor motor;
 
@@ -13,6 +13,11 @@ public class PlayerMovementController : MonoBehaviour {
     private Vector3 screenMovementForward;
     private Vector3 screenMovementRight;
     private Transform mainCameraTransform;
+
+    private Vector3 lastMovementDirection;
+
+    public float movementSpeed = 3;
+    public float movementSnappiness = 8.5f;
 
     // Use this for initialization
     void Start()
@@ -29,7 +34,7 @@ public class PlayerMovementController : MonoBehaviour {
         if (!character)
             character = transform;
 
-        playerMovementPlane = new Plane(character.up, character.position + character.up /** cursorPlaneHeight*/);
+        playerMovementPlane = new Plane(character.up, character.position + character.up);
 
     }
 
@@ -37,22 +42,37 @@ public class PlayerMovementController : MonoBehaviour {
     void Update()
     {
 
-        //Handle movement
-
         screenMovementSpace = Quaternion.Euler(0f, mainCameraTransform.eulerAngles.y, 0f);
         screenMovementForward = screenMovementSpace * Vector3.forward;
         screenMovementRight = screenMovementSpace * Vector3.right;
 
-        motor.movementDirection = player.GetHorizontalInput() * screenMovementRight + player.GetVerticalInput() * screenMovementForward;
+        motor.movementDirection = input.GetHorizontalInput() * screenMovementRight + input.GetVerticalInput() * screenMovementForward;
+        motor.facingDirection = input.GetFaceDirection(character);
+
+        /*
+         *  If X360 controller is used, adjust for the camera direction.
+         * */
+        if ((int)input.controlScheme < 5)
+        {
+            motor.facingDirection = motor.facingDirection.x * screenMovementRight + motor.facingDirection.z * screenMovementForward;
+
+        }
+
 
         if (motor.movementDirection.sqrMagnitude > 1)
             motor.movementDirection.Normalize();
+
+        motor.movementDirection = motor.movementDirection * movementSpeed;
+
+        motor.movementDirection = Vector3.Lerp(lastMovementDirection, motor.movementDirection, movementSnappiness * Time.deltaTime);
+
+        lastMovementDirection = motor.movementDirection;
+
 
         playerMovementPlane.normal = character.up;
         playerMovementPlane.distance = -character.position.y;
 
         motor.facingDirection.y = 0.0f;
-
     }
 
 
