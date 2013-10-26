@@ -19,15 +19,18 @@ public class PlayerInput : MonoBehaviour{
 
     public ControlScheme controlScheme = ControlScheme.Unspecified;
 
-    public void changeControlScheme()
+
+
+    //Switches between X360_1 and Keyboard
+    public void ChangeControlScheme()
     {
-        if ((int)controlScheme == 6)
+        if ((int)controlScheme == 5)
         {
             controlScheme = ControlScheme.XBOX360_1;
         }
         else
         {
-            controlScheme = (ControlScheme)((int)controlScheme + 1);
+            controlScheme = ControlScheme.Keyboard;
         }
     }
 
