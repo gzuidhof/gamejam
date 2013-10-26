@@ -16,9 +16,6 @@ public class PlayerMovementController : MonoBehaviour {
 
     private Vector3 lastMovementDirection;
 
-    public float movementSpeed = 3;
-    public float movementSnappiness = 8.5f;
-
     // Use this for initialization
     void Start()
     {
@@ -62,9 +59,8 @@ public class PlayerMovementController : MonoBehaviour {
         if (motor.movementDirection.sqrMagnitude > 1)
             motor.movementDirection.Normalize();
 
-        motor.movementDirection = motor.movementDirection * movementSpeed;
-
-        motor.movementDirection = Vector3.Lerp(lastMovementDirection, motor.movementDirection, movementSnappiness * Time.deltaTime);
+       // motor.movementDirection = motor.movementDirection;
+        //motor.movementDirection = Vector3.Lerp(lastMovementDirection, motor.movementDirection, movementSnappiness * Time.deltaTime);
 
         lastMovementDirection = motor.movementDirection;
 

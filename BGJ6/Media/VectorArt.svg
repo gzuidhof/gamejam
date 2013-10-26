@@ -2,6 +2,7 @@
 <!-- Created with Inkscape (http://www.inkscape.org/) -->
 
 <svg
+   xmlns:osb="http://www.openswatchbook.org/uri/2009/osb"
    xmlns:dc="http://purl.org/dc/elements/1.1/"
    xmlns:cc="http://creativecommons.org/ns#"
    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
@@ -19,7 +20,21 @@
    inkscape:export-xdpi="32.765949"
    inkscape:export-ydpi="32.765949">
   <defs
-     id="defs4" />
+     id="defs4">
+    <linearGradient
+       inkscape:collect="always"
+       id="linearGradient5544"
+       osb:paint="gradient">
+      <stop
+         style="stop-color:#ffeeaa;stop-opacity:1;"
+         offset="0"
+         id="stop5546" />
+      <stop
+         style="stop-color:#ffeeaa;stop-opacity:0;"
+         offset="1"
+         id="stop5548" />
+    </linearGradient>
+  </defs>
   <sodipodi:namedview
      id="base"
      pagecolor="#ffffff"
@@ -28,8 +43,8 @@
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
      inkscape:zoom="0.98994949"
-     inkscape:cx="380.44052"
-     inkscape:cy="835.08981"
+     inkscape:cx="423.17583"
+     inkscape:cy="893.0148"
      inkscape:document-units="px"
      inkscape:current-layer="layer1"
      showgrid="false"
@@ -46,7 +61,7 @@
         <dc:format>image/svg+xml</dc:format>
         <dc:type
            rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-        <dc:title></dc:title>
+        <dc:title />
       </cc:Work>
     </rdf:RDF>
   </metadata>
@@ -55,13 +70,279 @@
      inkscape:groupmode="layer"
      id="layer1">
     <rect
-       style="fill:#ffeeaa;fill-opacity:1;stroke:#000000;stroke-opacity:1;stroke-linejoin:round;stroke-width:8;stroke-miterlimit:4;stroke-dasharray:none"
+       style="fill:#ffeeaa;fill-opacity:1;stroke:#000000;stroke-width:32.99733353;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
        id="rect4834"
-       width="264.28571"
-       height="112.85714"
-       x="283.57144"
-       y="154.50504"
-       rx="2.4961061"
-       ry="0.97996259" />
+       width="840.71692"
+       height="603.5741"
+       x="43.458065"
+       y="337.15027"
+       rx="7.9403415"
+       ry="5.2409625" />
+    <g
+       transform="matrix(11.005762,2.5939776,-2.5939776,11.005762,-2930.5363,-3380.7673)"
+       id="g3745-0-1"
+       inkscape:export-xdpi="88.996094"
+       inkscape:export-ydpi="88.996094"
+       inkscape:export-filename="C:\Users\Guido\Documents\GitHub\gamejam\BGJ6\Assets\Texture\GUI\ManaPotFull.png">
+      <path
+         sodipodi:type="arc"
+         style="fill:#f9f9f9;fill-opacity:1;fill-rule:evenodd;stroke:none"
+         id="path3602-1-7"
+         sodipodi:cx="365.53125"
+         sodipodi:cy="240.04967"
+         sodipodi:rx="5.625"
+         sodipodi:ry="5.625"
+         d="m 371.15625,240.04967 c 0,3.1066 -2.5184,5.625 -5.625,5.625 -3.1066,0 -5.625,-2.5184 -5.625,-5.625 0,-3.1066 2.5184,-5.625 5.625,-5.625 C 368.63785,234.42467 371.15625,236.94307 371.15625,240.04967 Z" />
+      <rect
+         style="fill:#f9f9f9;fill-opacity:1;fill-rule:evenodd;stroke:none"
+         id="rect3622-6-4"
+         width="4.5625"
+         height="13.6875"
+         x="363.25"
+         y="230.18892" />
+      <rect
+         style="fill:#0035c9;fill-opacity:1;fill-rule:evenodd;stroke:none"
+         id="rect3622-2-4-0"
+         width="3.2821698"
+         height="9.8465099"
+         x="363.89017"
+         y="230.18892" />
+      <path
+         transform="matrix(0.87777778,0,0,0.87777778,44.676041,29.339403)"
+         sodipodi:type="arc"
+         style="fill:#0035c9;fill-opacity:1;fill-rule:evenodd;stroke:none"
+         id="path3602-7-06-9"
+         sodipodi:cx="365.53125"
+         sodipodi:cy="240.04967"
+         sodipodi:rx="5.625"
+         sodipodi:ry="5.625"
+         d="m 371.15625,240.04967 c 0,3.1066 -2.5184,5.625 -5.625,5.625 -3.1066,0 -5.625,-2.5184 -5.625,-5.625 0,-3.1066 2.5184,-5.625 5.625,-5.625 C 368.63785,234.42467 371.15625,236.94307 371.15625,240.04967 Z" />
+      <path
+         transform="matrix(0.15102914,0,0,0.15102914,313.43984,202.47085)"
+         sodipodi:type="arc"
+         style="fill:#f9f9f9;fill-opacity:1;fill-rule:evenodd;stroke:none"
+         id="path3602-7-9-1-4"
+         sodipodi:cx="365.53125"
+         sodipodi:cy="240.04967"
+         sodipodi:rx="5.625"
+         sodipodi:ry="5.625"
+         d="m 371.15625,240.04967 c 0,3.1066 -2.5184,5.625 -5.625,5.625 -3.1066,0 -5.625,-2.5184 -5.625,-5.625 0,-3.1066 2.5184,-5.625 5.625,-5.625 C 368.63785,234.42467 371.15625,236.94307 371.15625,240.04967 Z" />
+      <path
+         transform="matrix(0.09996032,0,0,0.09996032,331.25755,216.42898)"
+         sodipodi:type="arc"
+         style="fill:#ffffff;fill-opacity:1;fill-rule:evenodd;stroke:none"
+         id="path3602-7-9-5-8-8"
+         sodipodi:cx="365.53125"
+         sodipodi:cy="240.04967"
+         sodipodi:rx="5.625"
+         sodipodi:ry="5.625"
+         d="m 371.15625,240.04967 c 0,3.1066 -2.5184,5.625 -5.625,5.625 -3.1066,0 -5.625,-2.5184 -5.625,-5.625 0,-3.1066 2.5184,-5.625 5.625,-5.625 C 368.63785,234.42467 371.15625,236.94307 371.15625,240.04967 Z" />
+      <path
+         sodipodi:type="arc"
+         style="fill:#f9f9f9;fill-opacity:1;fill-rule:evenodd;stroke:none"
+         id="path3635-9-8"
+         sodipodi:cx="362.15625"
+         sodipodi:cy="228.58092"
+         sodipodi:rx="3.28125"
+         sodipodi:ry="0.65625"
+         d="m 365.4375,228.58092 c 0,0.36243 -1.46907,0.65625 -3.28125,0.65625 -1.81218,0 -3.28125,-0.29382 -3.28125,-0.65625 0,-0.36244 1.46907,-0.65625 3.28125,-0.65625 C 363.96843,227.92467 365.4375,228.21848 365.4375,228.58092 Z"
+         transform="matrix(0.88571428,0,0,0.88571428,44.764288,27.731535)" />
+    </g>
+    <g
+       id="g4063"
+       transform="translate(270.29354,67.30042)"
+       inkscape:export-xdpi="89.333618"
+       inkscape:export-ydpi="89.333618"
+       inkscape:export-filename="C:\Users\Guido\Documents\GitHub\gamejam\BGJ6\Assets\Texture\GUI\HealthpotFull.png">
+      <path
+         id="path4065"
+         d="m 125.77881,98.45932 c 10.68802,33.39763 -7.71519,69.16564 -41.124078,79.85005 C 51.210451,188.99378 15.465768,170.59678 4.7777545,137.19915 -5.9102593,103.80153 12.492943,68.033515 45.901834,57.349104 79.310725,46.664694 115.0908,65.061692 125.77881,98.45932 Z"
+         style="fill:#f9f9f9;fill-opacity:1;fill-rule:evenodd;stroke:none"
+         inkscape:connector-curvature="0" />
+      <path
+         id="path4067"
+         d="M 6.7950287,19.635258 55.846642,3.9624304 102.98715,151.13842 53.900149,166.81124 Z"
+         style="fill:#f9f9f9;fill-opacity:1;fill-rule:evenodd;stroke:none"
+         inkscape:connector-curvature="0" />
+      <path
+         id="path4069"
+         d="M 13.660839,17.44177 48.980832,6.1559187 82.885194,112.00942 47.565201,123.33065 Z"
+         style="fill:#ff0303;fill-opacity:1;fill-rule:evenodd;stroke:none"
+         inkscape:connector-curvature="0" />
+      <path
+         id="path4071"
+         d="m 118.38214,100.8297 c 9.37856,29.32906 -6.75964,60.7101 -36.098589,70.08549 C 52.944599,180.29058 21.552982,164.15783 12.174426,134.82877 2.7958712,105.49971 18.934064,74.118676 48.273016,64.743283 77.611968,55.367889 109.00359,71.500642 118.38214,100.8297 Z"
+         style="fill:#ff0303;fill-opacity:1;fill-rule:evenodd;stroke:none"
+         inkscape:connector-curvature="0" />
+      <path
+         id="path4073"
+         d="m 103.34106,89.933019 c 1.62798,5.059174 -1.16789,10.472141 -6.193384,12.064181 -5.060881,1.62743 -10.440279,-1.1675 -12.068254,-6.191293 C 83.451446,90.746732 86.247317,85.333769 91.308198,83.741721 96.333688,82.114294 101.74848,84.909223 103.34106,89.933019 Z"
+         style="fill:#f9f9f9;fill-opacity:1;fill-rule:evenodd;stroke:none"
+         inkscape:connector-curvature="0" />
+      <path
+         id="path4075"
+         d="m 96.970722,112.11555 c 1.061723,3.36099 -0.778597,6.93426 -4.10533,7.99562 -3.326733,1.06137 -6.901201,-0.77833 -7.998315,-4.10394 -1.061723,-3.36099 0.778597,-6.93426 4.140721,-7.99562 C 92.33453,106.95024 95.908999,108.78994 96.970722,112.11555 Z"
+         style="fill:#f9f9f9;fill-opacity:1;fill-rule:evenodd;stroke:none"
+         inkscape:connector-curvature="0" />
+      <path
+         id="path4077"
+         d="M 62.570889,1.804321 C 63.703394,5.2360688 50.608807,12.52411 33.33811,18.04321 16.067412,23.562309 1.1678956,25.260494 0.07078155,21.793367 -1.0263325,18.361619 12.068254,11.073578 29.338952,5.5544783 46.574259,0.03537884 61.473775,-1.6628056 62.570889,1.804321 Z"
+         style="fill:#f9f9f9;fill-opacity:1;fill-rule:evenodd;stroke:none"
+         inkscape:connector-curvature="0" />
+    </g>
+    <g
+       id="g5573"
+       transform="matrix(3.3659422,0,0,3.3659422,-1001.3943,-998.49156)"
+       inkscape:export-xdpi="44.560631"
+       inkscape:export-ydpi="44.560631"
+       inkscape:export-filename="C:\Users\Guido\Documents\GitHub\gamejam\BGJ6\Assets\Texture\GUI\Healthbar.png">
+      <path
+         sodipodi:type="arc"
+         style="fill:#f0f0f0;fill-opacity:1;fill-rule:nonzero;stroke:none"
+         id="path5188-2"
+         sodipodi:cx="379.03381"
+         sodipodi:cy="1996.899"
+         sodipodi:rx="27.438475"
+         sodipodi:ry="27.438475"
+         d="m 406.47229,1996.899 c 0,15.1539 -12.28463,27.4385 -27.43848,27.4385 -15.15385,0 -27.43847,-12.2846 -27.43847,-27.4385 0,-15.1538 12.28462,-27.4384 27.43847,-27.4384 C 394.18766,1969.4606 406.47229,1981.7452 406.47229,1996.899 Z"
+         transform="matrix(0.80914472,0,0,0.80914472,116.56071,-1193.7533)" />
+      <path
+         transform="matrix(0.70483045,0,0,0.70483045,156.09934,-985.44823)"
+         d="m 406.47229,1996.899 c 0,15.1539 -12.28463,27.4385 -27.43848,27.4385 -15.15385,0 -27.43847,-12.2846 -27.43847,-27.4385 0,-15.1538 12.28462,-27.4384 27.43847,-27.4384 C 394.18766,1969.4606 406.47229,1981.7452 406.47229,1996.899 Z"
+         sodipodi:ry="27.438475"
+         sodipodi:rx="27.438475"
+         sodipodi:cy="1996.899"
+         sodipodi:cx="379.03381"
+         id="path5073-7"
+         style="fill:#aa0000;fill-opacity:1;fill-rule:nonzero;stroke:none"
+         sodipodi:type="arc" />
+      <path
+         d="m 406.47229,1996.899 c 0,15.1539 -12.28463,27.4385 -27.43848,27.4385 -15.15385,0 -27.43847,-12.2846 -27.43847,-27.4385 0,-15.1538 12.28462,-27.4384 27.43847,-27.4384 C 394.18766,1969.4606 406.47229,1981.7452 406.47229,1996.899 Z"
+         sodipodi:ry="27.438475"
+         sodipodi:rx="27.438475"
+         sodipodi:cy="1996.899"
+         sodipodi:cx="379.03381"
+         id="path5073-1-53"
+         style="fill:#d40000;fill-opacity:1;fill-rule:nonzero;stroke:none"
+         sodipodi:type="arc"
+         transform="matrix(0.64108284,0,0,0.64108284,180.26184,-858.15073)" />
+      <path
+         id="path5073-1-6-73"
+         d="m 422.92172,405.90905 c -3.83805,0 -7.39446,1.21773 -10.28612,3.30396 1.75295,-0.34988 3.56255,-0.52862 5.41838,-0.52862 9.01103,0 17,4.32385 22.02595,11.01297 C 438.34478,411.80664 431.33364,405.90905 422.92172,405.90905 Z"
+         style="fill:#ff2a2a;fill-opacity:1;fill-rule:nonzero;stroke:none"
+         inkscape:connector-curvature="0" />
+    </g>
+    <g
+       inkscape:export-filename="C:\Users\Guido\Documents\GitHub\gamejam\BGJ6\Assets\Texture\GUI\ManaPotEmpty.png"
+       inkscape:export-ydpi="88.996124"
+       inkscape:export-xdpi="88.996124"
+       id="g5594"
+       transform="matrix(11.005762,2.5939776,-2.5939776,11.005762,-2801.2368,-3374.7064)">
+      <path
+         d="m 371.15625,240.04967 c 0,3.1066 -2.5184,5.625 -5.625,5.625 -3.1066,0 -5.625,-2.5184 -5.625,-5.625 0,-3.1066 2.5184,-5.625 5.625,-5.625 C 368.63785,234.42467 371.15625,236.94307 371.15625,240.04967 Z"
+         sodipodi:ry="5.625"
+         sodipodi:rx="5.625"
+         sodipodi:cy="240.04967"
+         sodipodi:cx="365.53125"
+         id="path5596"
+         style="fill:#f9f9f9;fill-opacity:1;fill-rule:evenodd;stroke:none"
+         sodipodi:type="arc" />
+      <rect
+         y="230.18892"
+         x="363.25"
+         height="13.6875"
+         width="4.5625"
+         id="rect5598"
+         style="fill:#f9f9f9;fill-opacity:1;fill-rule:evenodd;stroke:none" />
+      <rect
+         y="230.18892"
+         x="363.89017"
+         height="9.8465099"
+         width="3.2821698"
+         id="rect5600"
+         style="fill:#999999;fill-opacity:1;fill-rule:evenodd;stroke:none" />
+      <path
+         d="m 371.15625,240.04967 c 0,3.1066 -2.5184,5.625 -5.625,5.625 -3.1066,0 -5.625,-2.5184 -5.625,-5.625 0,-3.1066 2.5184,-5.625 5.625,-5.625 C 368.63785,234.42467 371.15625,236.94307 371.15625,240.04967 Z"
+         sodipodi:ry="5.625"
+         sodipodi:rx="5.625"
+         sodipodi:cy="240.04967"
+         sodipodi:cx="365.53125"
+         id="path5602"
+         style="fill:#999999;fill-opacity:1;fill-rule:evenodd;stroke:none"
+         sodipodi:type="arc"
+         transform="matrix(0.87777778,0,0,0.87777778,44.676041,29.339403)" />
+      <path
+         d="m 371.15625,240.04967 c 0,3.1066 -2.5184,5.625 -5.625,5.625 -3.1066,0 -5.625,-2.5184 -5.625,-5.625 0,-3.1066 2.5184,-5.625 5.625,-5.625 C 368.63785,234.42467 371.15625,236.94307 371.15625,240.04967 Z"
+         sodipodi:ry="5.625"
+         sodipodi:rx="5.625"
+         sodipodi:cy="240.04967"
+         sodipodi:cx="365.53125"
+         id="path5604"
+         style="fill:#f9f9f9;fill-opacity:1;fill-rule:evenodd;stroke:none"
+         sodipodi:type="arc"
+         transform="matrix(0.15102914,0,0,0.15102914,313.43984,202.47085)" />
+      <path
+         d="m 371.15625,240.04967 c 0,3.1066 -2.5184,5.625 -5.625,5.625 -3.1066,0 -5.625,-2.5184 -5.625,-5.625 0,-3.1066 2.5184,-5.625 5.625,-5.625 C 368.63785,234.42467 371.15625,236.94307 371.15625,240.04967 Z"
+         sodipodi:ry="5.625"
+         sodipodi:rx="5.625"
+         sodipodi:cy="240.04967"
+         sodipodi:cx="365.53125"
+         id="path5606"
+         style="fill:#ffffff;fill-opacity:1;fill-rule:evenodd;stroke:none"
+         sodipodi:type="arc"
+         transform="matrix(0.09996032,0,0,0.09996032,331.25755,216.42898)" />
+      <path
+         transform="matrix(0.88571428,0,0,0.88571428,44.764288,27.731535)"
+         d="m 365.4375,228.58092 c 0,0.36243 -1.46907,0.65625 -3.28125,0.65625 -1.81218,0 -3.28125,-0.29382 -3.28125,-0.65625 0,-0.36244 1.46907,-0.65625 3.28125,-0.65625 C 363.96843,227.92467 365.4375,228.21848 365.4375,228.58092 Z"
+         sodipodi:ry="0.65625"
+         sodipodi:rx="3.28125"
+         sodipodi:cy="228.58092"
+         sodipodi:cx="362.15625"
+         id="path5608"
+         style="fill:#f9f9f9;fill-opacity:1;fill-rule:evenodd;stroke:none"
+         sodipodi:type="arc" />
+    </g>
+    <g
+       inkscape:export-filename="C:\Users\Guido\Documents\GitHub\gamejam\BGJ6\Assets\Texture\GUI\HealthpotEmpty.png"
+       inkscape:export-ydpi="89.43335"
+       inkscape:export-xdpi="89.43335"
+       transform="translate(109.57925,74.443277)"
+       id="g5610">
+      <path
+         inkscape:connector-curvature="0"
+         style="fill:#f9f9f9;fill-opacity:1;fill-rule:evenodd;stroke:none"
+         d="m 125.77881,98.45932 c 10.68802,33.39763 -7.71519,69.16564 -41.124078,79.85005 C 51.210451,188.99378 15.465768,170.59678 4.7777545,137.19915 -5.9102593,103.80153 12.492943,68.033515 45.901834,57.349104 79.310725,46.664694 115.0908,65.061692 125.77881,98.45932 Z"
+         id="path5612" />
+      <path
+         inkscape:connector-curvature="0"
+         style="fill:#f9f9f9;fill-opacity:1;fill-rule:evenodd;stroke:none"
+         d="M 6.7950287,19.635258 55.846642,3.9624304 102.98715,151.13842 53.900149,166.81124 Z"
+         id="path5614" />
+      <path
+         inkscape:connector-curvature="0"
+         style="fill:#999999;fill-opacity:1;fill-rule:evenodd;stroke:none"
+         d="M 13.660839,17.44177 48.980832,6.1559187 82.885194,112.00942 47.565201,123.33065 Z"
+         id="path5616" />
+      <path
+         inkscape:connector-curvature="0"
+         style="fill:#999999;fill-opacity:1;fill-rule:evenodd;stroke:none"
+         d="m 118.38214,100.8297 c 9.37856,29.32906 -6.75964,60.7101 -36.098589,70.08549 C 52.944599,180.29058 21.552982,164.15783 12.174426,134.82877 2.7958712,105.49971 18.934064,74.118676 48.273016,64.743283 77.611968,55.367889 109.00359,71.500642 118.38214,100.8297 Z"
+         id="path5618" />
+      <path
+         inkscape:connector-curvature="0"
+         style="fill:#f9f9f9;fill-opacity:1;fill-rule:evenodd;stroke:none"
+         d="m 103.34106,89.933019 c 1.62798,5.059174 -1.16789,10.472141 -6.193384,12.064181 -5.060881,1.62743 -10.440279,-1.1675 -12.068254,-6.191293 C 83.451446,90.746732 86.247317,85.333769 91.308198,83.741721 96.333688,82.114294 101.74848,84.909223 103.34106,89.933019 Z"
+         id="path5620" />
+      <path
+         inkscape:connector-curvature="0"
+         style="fill:#f9f9f9;fill-opacity:1;fill-rule:evenodd;stroke:none"
+         d="m 96.970722,112.11555 c 1.061723,3.36099 -0.778597,6.93426 -4.10533,7.99562 -3.326733,1.06137 -6.901201,-0.77833 -7.998315,-4.10394 -1.061723,-3.36099 0.778597,-6.93426 4.140721,-7.99562 C 92.33453,106.95024 95.908999,108.78994 96.970722,112.11555 Z"
+         id="path5622" />
+      <path
+         inkscape:connector-curvature="0"
+         style="fill:#f9f9f9;fill-opacity:1;fill-rule:evenodd;stroke:none"
+         d="M 62.570889,1.804321 C 63.703394,5.2360688 50.608807,12.52411 33.33811,18.04321 16.067412,23.562309 1.1678956,25.260494 0.07078155,21.793367 -1.0263325,18.361619 12.068254,11.073578 29.338952,5.5544783 46.574259,0.03537884 61.473775,-1.6628056 62.570889,1.804321 Z"
+         id="path5624" />
+    </g>
   </g>
 </svg>

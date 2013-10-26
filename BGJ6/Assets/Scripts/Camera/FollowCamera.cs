@@ -4,11 +4,12 @@ using System.Collections;
 public class FollowCamera : MonoBehaviour {
 
     public Transform target;
-
+    public bool rotate;
+    public float rotateSpeed = 1f;
 
     private Vector3 targetPos;
     private Vector3 startOffset;
-    private  Quaternion startRot;
+    private  Quaternion targetRot;
 
 
 	// Use this for initialization
@@ -20,6 +21,14 @@ public class FollowCamera : MonoBehaviour {
 	void LateUpdate () {
 
         targetPos = target.position + startOffset;
-        transform.position = Vector3.Lerp(transform.position, targetPos, Time.deltaTime);
+        transform.position = Vector3.Lerp(transform.position, targetPos, Time.deltaTime * 1.5f);
+
+        if (rotate)
+        {
+            targetRot = Quaternion.LookRotation(target.position - transform.position);
+            transform.rotation = Quaternion.Lerp(transform.rotation, targetRot, Time.deltaTime * rotateSpeed);
+        }
+        
+
 	}
 }

@@ -13,6 +13,9 @@ using System.Collections.Generic;
 [AddComponentMenu("NGUI/Interaction/Slider")]
 public class UISlider : UIWidgetContainer
 {
+
+    public bool updateDrag = false;
+
 	public enum Direction
 	{
 		Horizontal,
@@ -228,6 +231,7 @@ public class UISlider : UIWidgetContainer
 
 	void UpdateDrag ()
 	{
+        if (!updateDrag) return;
 		// Create a plane for the slider
 		if (mCol == null || UICamera.currentCamera == null || UICamera.currentTouch == null) return;
 
