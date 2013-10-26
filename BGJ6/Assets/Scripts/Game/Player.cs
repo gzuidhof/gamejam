@@ -28,14 +28,38 @@ public class Player : MonoBehaviour {
     public PlayerStats stats;
     public PlayerAttributes attributes;
 
+    public UISlider healthSlider;
+    public UISlider manaSlider;
+
+
 
 	// Use this for initialization
 	void Start () {
-	
+        UpdateHUD();
 	}
-	
-	// Update is called once per frame
-	void Update () {
-	
-	}
+
+    void Update()
+    {
+
+    }
+
+
+    public void DealDamage(float dmg)
+    {
+        stats.health -= dmg;
+        UpdateHUD();
+    }
+
+    public void DrainMana(float m)
+    {
+        stats.mana -= m;
+        UpdateHUD();
+    }
+
+    void UpdateHUD()
+    {
+        healthSlider.value = stats.health / attributes.maxHealth;
+        manaSlider.value = stats.mana / attributes.maxMana;
+    }
+
 }

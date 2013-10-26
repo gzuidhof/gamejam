@@ -8,11 +8,16 @@ public class EnemyBrain : MonoBehaviour {
     NavMeshAgent agent;
     public float aggroDistance = 8f;
 
+    public MeleeWeapon weapon;
+
+    private float baseSpeed;
+
 
 	// Use this for initialization
 	void Start () {
         agent = GetComponent<NavMeshAgent>();
         target = GameObject.FindGameObjectWithTag("Player");
+        baseSpeed = agent.speed;
 	}
 	
 	// Update is called once per frame
@@ -25,15 +30,21 @@ public class EnemyBrain : MonoBehaviour {
     {
         if (target != null)
         {
+            if (weapon) weapon.Swing();
             if (Vector3.Distance(target.transform.position, transform.position) > 1.5f)
             {
-                agent.enabled = true;
+                agent.speed = baseSpeed;
+                //agent.enabled = true;
                 agent.SetDestination(target.transform.position);
             }
             else if (Vector3.Distance(target.transform.position, transform.position) < 1.25f)
-                agent.enabled = false;
+            {
+                agent.speed = 0f;
+                //agent.enabled = false;
+            }
         }
 
     }
+
 
 }

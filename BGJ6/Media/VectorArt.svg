@@ -22,7 +22,6 @@
   <defs
      id="defs4">
     <linearGradient
-       inkscape:collect="always"
        id="linearGradient5544"
        osb:paint="gradient">
       <stop
@@ -42,9 +41,9 @@
      borderopacity="1.0"
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
-     inkscape:zoom="0.98994949"
-     inkscape:cx="423.17583"
-     inkscape:cy="893.0148"
+     inkscape:zoom="0.7"
+     inkscape:cx="440.70741"
+     inkscape:cy="759.3023"
      inkscape:document-units="px"
      inkscape:current-layer="layer1"
      showgrid="false"
@@ -74,8 +73,8 @@
        id="rect4834"
        width="840.71692"
        height="603.5741"
-       x="43.458065"
-       y="337.15027"
+       x="109.17235"
+       y="657.15027"
        rx="7.9403415"
        ry="5.2409625" />
     <g
@@ -233,6 +232,77 @@
          inkscape:connector-curvature="0" />
     </g>
     <g
+       transform="matrix(11.005762,2.5939776,-2.5939776,11.005762,-2797.492,-3374.4105)"
+       id="g4094"
+       inkscape:export-xdpi="88.996124"
+       inkscape:export-ydpi="88.996124"
+       inkscape:export-filename="C:\Users\Guido\Documents\GitHub\gamejam\BGJ6\Assets\Texture\GUI\ManaPotShadow.png"
+       style="fill:#000000">
+      <path
+         sodipodi:type="arc"
+         style="fill:#000000;fill-opacity:1;fill-rule:evenodd;stroke:none"
+         id="path4096"
+         sodipodi:cx="365.53125"
+         sodipodi:cy="240.04967"
+         sodipodi:rx="5.625"
+         sodipodi:ry="5.625"
+         d="m 371.15625,240.04967 c 0,3.1066 -2.5184,5.625 -5.625,5.625 -3.1066,0 -5.625,-2.5184 -5.625,-5.625 0,-3.1066 2.5184,-5.625 5.625,-5.625 C 368.63785,234.42467 371.15625,236.94307 371.15625,240.04967 Z" />
+      <rect
+         style="fill:#000000;fill-opacity:1;fill-rule:evenodd;stroke:none"
+         id="rect4098"
+         width="4.5625"
+         height="13.6875"
+         x="363.25"
+         y="230.18892" />
+      <rect
+         style="fill:#000000;fill-opacity:1;fill-rule:evenodd;stroke:none"
+         id="rect4100"
+         width="3.2821698"
+         height="9.8465099"
+         x="363.89017"
+         y="230.18892" />
+      <path
+         transform="matrix(0.87777778,0,0,0.87777778,44.676041,29.339403)"
+         sodipodi:type="arc"
+         style="fill:#000000;fill-opacity:1;fill-rule:evenodd;stroke:none"
+         id="path4102"
+         sodipodi:cx="365.53125"
+         sodipodi:cy="240.04967"
+         sodipodi:rx="5.625"
+         sodipodi:ry="5.625"
+         d="m 371.15625,240.04967 c 0,3.1066 -2.5184,5.625 -5.625,5.625 -3.1066,0 -5.625,-2.5184 -5.625,-5.625 0,-3.1066 2.5184,-5.625 5.625,-5.625 C 368.63785,234.42467 371.15625,236.94307 371.15625,240.04967 Z" />
+      <path
+         transform="matrix(0.15102914,0,0,0.15102914,313.43984,202.47085)"
+         sodipodi:type="arc"
+         style="fill:#000000;fill-opacity:1;fill-rule:evenodd;stroke:none"
+         id="path4104"
+         sodipodi:cx="365.53125"
+         sodipodi:cy="240.04967"
+         sodipodi:rx="5.625"
+         sodipodi:ry="5.625"
+         d="m 371.15625,240.04967 c 0,3.1066 -2.5184,5.625 -5.625,5.625 -3.1066,0 -5.625,-2.5184 -5.625,-5.625 0,-3.1066 2.5184,-5.625 5.625,-5.625 C 368.63785,234.42467 371.15625,236.94307 371.15625,240.04967 Z" />
+      <path
+         transform="matrix(0.09996032,0,0,0.09996032,331.25755,216.42898)"
+         sodipodi:type="arc"
+         style="fill:#000000;fill-opacity:1;fill-rule:evenodd;stroke:none"
+         id="path4106"
+         sodipodi:cx="365.53125"
+         sodipodi:cy="240.04967"
+         sodipodi:rx="5.625"
+         sodipodi:ry="5.625"
+         d="m 371.15625,240.04967 c 0,3.1066 -2.5184,5.625 -5.625,5.625 -3.1066,0 -5.625,-2.5184 -5.625,-5.625 0,-3.1066 2.5184,-5.625 5.625,-5.625 C 368.63785,234.42467 371.15625,236.94307 371.15625,240.04967 Z" />
+      <path
+         sodipodi:type="arc"
+         style="fill:#000000;fill-opacity:1;fill-rule:evenodd;stroke:none"
+         id="path4108"
+         sodipodi:cx="362.15625"
+         sodipodi:cy="228.58092"
+         sodipodi:rx="3.28125"
+         sodipodi:ry="0.65625"
+         d="m 365.4375,228.58092 c 0,0.36243 -1.46907,0.65625 -3.28125,0.65625 -1.81218,0 -3.28125,-0.29382 -3.28125,-0.65625 0,-0.36244 1.46907,-0.65625 3.28125,-0.65625 C 363.96843,227.92467 365.4375,228.21848 365.4375,228.58092 Z"
+         transform="matrix(0.88571428,0,0,0.88571428,44.764288,27.731535)" />
+    </g>
+    <g
        inkscape:export-filename="C:\Users\Guido\Documents\GitHub\gamejam\BGJ6\Assets\Texture\GUI\ManaPotEmpty.png"
        inkscape:export-ydpi="88.996124"
        inkscape:export-xdpi="88.996124"
@@ -301,6 +371,49 @@
          id="path5608"
          style="fill:#f9f9f9;fill-opacity:1;fill-rule:evenodd;stroke:none"
          sodipodi:type="arc" />
+    </g>
+    <g
+       id="g4078"
+       transform="translate(114.28338,76.560754)"
+       inkscape:export-xdpi="89.333618"
+       inkscape:export-ydpi="89.333618"
+       inkscape:export-filename="C:\Users\Guido\Documents\GitHub\gamejam\BGJ6\Assets\Texture\GUI\HealthpotShadow.png"
+       style="fill:#000000">
+      <path
+         id="path4080"
+         d="m 125.77881,98.45932 c 10.68802,33.39763 -7.71519,69.16564 -41.124078,79.85005 C 51.210451,188.99378 15.465768,170.59678 4.7777545,137.19915 -5.9102593,103.80153 12.492943,68.033515 45.901834,57.349104 79.310725,46.664694 115.0908,65.061692 125.77881,98.45932 Z"
+         style="fill:#000000;fill-opacity:1;fill-rule:evenodd;stroke:none"
+         inkscape:connector-curvature="0" />
+      <path
+         id="path4082"
+         d="M 6.7950287,19.635258 55.846642,3.9624304 102.98715,151.13842 53.900149,166.81124 Z"
+         style="fill:#000000;fill-opacity:1;fill-rule:evenodd;stroke:none"
+         inkscape:connector-curvature="0" />
+      <path
+         id="path4084"
+         d="M 13.660839,17.44177 48.980832,6.1559187 82.885194,112.00942 47.565201,123.33065 Z"
+         style="fill:#000000;fill-opacity:1;fill-rule:evenodd;stroke:none"
+         inkscape:connector-curvature="0" />
+      <path
+         id="path4086"
+         d="m 118.38214,100.8297 c 9.37856,29.32906 -6.75964,60.7101 -36.098589,70.08549 C 52.944599,180.29058 21.552982,164.15783 12.174426,134.82877 2.7958712,105.49971 18.934064,74.118676 48.273016,64.743283 77.611968,55.367889 109.00359,71.500642 118.38214,100.8297 Z"
+         style="fill:#000000;fill-opacity:1;fill-rule:evenodd;stroke:none"
+         inkscape:connector-curvature="0" />
+      <path
+         id="path4088"
+         d="m 103.34106,89.933019 c 1.62798,5.059174 -1.16789,10.472141 -6.193384,12.064181 -5.060881,1.62743 -10.440279,-1.1675 -12.068254,-6.191293 C 83.451446,90.746732 86.247317,85.333769 91.308198,83.741721 96.333688,82.114294 101.74848,84.909223 103.34106,89.933019 Z"
+         style="fill:#000000;fill-opacity:1;fill-rule:evenodd;stroke:none"
+         inkscape:connector-curvature="0" />
+      <path
+         id="path4090"
+         d="m 96.970722,112.11555 c 1.061723,3.36099 -0.778597,6.93426 -4.10533,7.99562 -3.326733,1.06137 -6.901201,-0.77833 -7.998315,-4.10394 -1.061723,-3.36099 0.778597,-6.93426 4.140721,-7.99562 C 92.33453,106.95024 95.908999,108.78994 96.970722,112.11555 Z"
+         style="fill:#000000;fill-opacity:1;fill-rule:evenodd;stroke:none"
+         inkscape:connector-curvature="0" />
+      <path
+         id="path4092"
+         d="M 62.570889,1.804321 C 63.703394,5.2360688 50.608807,12.52411 33.33811,18.04321 16.067412,23.562309 1.1678956,25.260494 0.07078155,21.793367 -1.0263325,18.361619 12.068254,11.073578 29.338952,5.5544783 46.574259,0.03537884 61.473775,-1.6628056 62.570889,1.804321 Z"
+         style="fill:#000000;fill-opacity:1;fill-rule:evenodd;stroke:none"
+         inkscape:connector-curvature="0" />
     </g>
     <g
        inkscape:export-filename="C:\Users\Guido\Documents\GitHub\gamejam\BGJ6\Assets\Texture\GUI\HealthpotEmpty.png"

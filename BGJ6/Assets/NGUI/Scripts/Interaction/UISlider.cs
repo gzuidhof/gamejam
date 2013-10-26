@@ -208,7 +208,7 @@ public class UISlider : UIWidgetContainer
 
 	void OnKey (KeyCode key)
 	{
-		if (enabled)
+		if (enabled && updateDrag)
 		{
 			float step = (numberOfSteps > 1f) ? 1f / (numberOfSteps - 1) : 0.125f;
 
