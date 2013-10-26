@@ -40,6 +40,7 @@ public class EnemyBrain : MonoBehaviour {
             else if (Vector3.Distance(target.transform.position, transform.position) < 1.25f)
             {
                 agent.speed = 0f;
+                agent.velocity = Vector3.zero;
                 //agent.enabled = false;
             }
         }
