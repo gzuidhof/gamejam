@@ -39,6 +39,7 @@ public class Player : MonoBehaviour {
 
     public List<AudioClip> owSounds;
 
+    public GameObject menu;
 
     public GameObject shield;
 
@@ -51,6 +52,8 @@ public class Player : MonoBehaviour {
     {
         RegenHealth();
         RegenMana();
+
+        if (Input.GetKeyDown(Bindings.Get(Bindings.Key.Menu))) menu.SetActive(!menu.activeSelf);
     }
 
 
@@ -65,6 +68,11 @@ public class Player : MonoBehaviour {
         stats.health -= dmg;
         lastDmgTime = Time.time;
         UpdateHUD();
+
+        if (stats.health <= 0)
+        {
+            Checkpoint.lastCheckpoint.Respawn();
+        }
     }
 
     public void DrainMana(float m)
@@ -74,7 +82,7 @@ public class Player : MonoBehaviour {
         UpdateHUD();
     }
 
-    void UpdateHUD()
+    public void UpdateHUD()
     {
         healthSlider.value = stats.health / attributes.maxHealth;
         manaSlider.value = stats.mana / attributes.maxMana;

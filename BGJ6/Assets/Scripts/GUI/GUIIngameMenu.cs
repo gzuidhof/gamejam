@@ -11,25 +11,25 @@ public class GUIIngameMenu : MonoBehaviour {
     public AudioClip keymouse;
     public AudioClip x360;
 
+    public PlayerMovementMotor motor;
+    public AudioSource music;
+
     public void OnQuitButton()
     {
         Application.Quit();
     }
 
-    public void OnInputButton()
+    public void OnMusic()
     {
-        input.ChangeControlScheme();
-        audio.pitch = 1.3f;
-        if (input.controlScheme == PlayerInput.ControlScheme.Keyboard)
-            audio.PlayOneShot(keymouse);
-        else if (input.controlScheme == PlayerInput.ControlScheme.XBOX360_1)
-            audio.PlayOneShot(x360);
-
+        if (music.volume > 0f)
+            music.volume = 0f;
+        else music.volume = 0.15f;
 
     }
 
     public void OnPlayButton()
     {
+        motor.enabled = true;
         gameObject.SetActive(false);
     }
 

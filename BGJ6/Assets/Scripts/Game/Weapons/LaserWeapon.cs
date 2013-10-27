@@ -1,6 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 
+[RequireComponent(typeof(AudioSource))]
 public class LaserWeapon : MonoBehaviour {
 
     public LineRenderer lineRenderer;
@@ -12,12 +13,18 @@ public class LaserWeapon : MonoBehaviour {
     public bool firing = false;
     public float dmg = 5f;
 
+    public AudioClip laserSound;
+
     private Player p;
 
     public float manaDrain = 15f;
+    private float audioDelay;
+    private float lastAudioTime;
 
     void ShootLaser()
     {
+
+
         RaycastHit hit;
         bool hitAnything = Physics.Raycast(origin.position,origin.forward, out hit, range);
         if (hitAnything)
@@ -27,24 +34,40 @@ public class LaserWeapon : MonoBehaviour {
             Collider c = hit.collider;
             if (c.transform.root.tag == "Player")
             {
+                PlaySounds(true);
                 c.transform.root.GetComponent<Player>().DealDamage(dmg*Time.deltaTime);
             }
-            else if (c.transform.root.tag == "Enemy")
+            else if (c.transform.root.tag == "Enemy" && c.GetComponent<Enemy>() != null)
             {
+                PlaySounds(true);
                 //Debug.Log("Dealing Damage");
                 c.GetComponent<Enemy>().DealDamage(dmg * Time.deltaTime, true);
             }
+            else PlaySounds(false);
         }
         else
         {
             StartCoroutine(LineEffect(origin.position + origin.forward*range));
+            PlaySounds(false);
         }
     }
 
 
+    void PlaySounds(bool hitEnemy)
+    {
+        if (Time.time - lastAudioTime > audioDelay)
+        {
+            if (hitEnemy) audio.pitch = 0.75f;
+            else audio.pitch = 1f;
+            audio.PlayOneShot(laserSound);
+            lastAudioTime = Time.time;
+        }
+
+    }
 	// Use this for initialization
 	void Start () {
         p = transform.root.GetComponent<Player>();
+        audioDelay = laserSound.length - 0.05f;
 	}
 	
 	// Update is called once per frame
