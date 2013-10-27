@@ -46,6 +46,8 @@ public class MeleeWeapon : MonoBehaviour {
 	void Start () {
         player = GameObject.FindGameObjectWithTag("Player").transform;
         tween = GetComponent<TweenRotation>();
+
+        if (!playerWeapon) tween.duration *= Random.Range(0.9f, 1.1f);
 	}
 	
 	// Update is called once per frame

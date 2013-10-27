@@ -36,7 +36,7 @@ public class Projectile : MonoBehaviour {
         //{
         if (c.transform.root.tag == "Player")
         {
-            c.GetComponent<Player>().DealDamage(dmg);
+            c.transform.root.GetComponent<Player>().DealDamage(dmg);
         }
         else if (c.transform.root.tag == "Enemy")
         {

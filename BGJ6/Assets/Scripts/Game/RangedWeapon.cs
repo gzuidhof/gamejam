@@ -9,11 +9,12 @@ public class RangedWeapon : MonoBehaviour {
     public GameObject projectile;
     public float manaCost = 2.5f;
 
+    public float fireIntervalForAI = 1.5f;
+    private float lastFireTime;
 
 	// Use this for initialization
 	void Start () {
-        if (playerWeapon)
-            player = transform.root.GetComponent<Player>();
+            player = GameObject.FindGameObjectWithTag("Player").GetComponent<Player>();
 	}
 	
 	// Update is called once per frame
@@ -29,7 +30,7 @@ public class RangedWeapon : MonoBehaviour {
             if (player.stats.mana > manaCost)
             {
                 player.DrainMana(manaCost);
-                FireProjectile();
+                FireProjectile(transform.forward);
             }
             else
             {
@@ -38,10 +39,19 @@ public class RangedWeapon : MonoBehaviour {
         }
     }
 
-    private void FireProjectile()
+    private void FireProjectile(Vector3 dir)
     {
         GameObject go = (GameObject)Instantiate(projectile, transform.position, Quaternion.identity);
-        go.GetComponent<Projectile>().Fire(transform.position, transform.forward, transform.root.tag);
+        go.GetComponent<Projectile>().Fire(transform.position, dir, transform.root.tag);
 
+    }
+
+    internal void FireAtPlayer()
+    {
+        if (Time.time - lastFireTime > fireIntervalForAI)
+        {
+            lastFireTime = Time.time;
+            FireProjectile(player.transform.position - transform.position);
+        }
     }
 }

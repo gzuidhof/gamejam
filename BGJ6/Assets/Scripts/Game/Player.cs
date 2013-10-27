@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections;
-
+using System.Collections.Generic;
 
 
 
@@ -34,10 +34,13 @@ public class Player : MonoBehaviour {
     public GameObject selectedSpell;
 
     private float lastDmgTime = 0f;
+    public AudioClip outOfManaSound;
+    public AudioClip shieldSound;
+
+    public List<AudioClip> owSounds;
 
 
-
-
+    public GameObject shield;
 
 	// Use this for initialization
 	void Start () {
@@ -53,6 +56,12 @@ public class Player : MonoBehaviour {
 
     public void DealDamage(float dmg)
     {
+        if (shield.activeSelf)
+        {
+            audio.PlayOneShot(shieldSound);
+            return;
+        }
+        OnDamageTaken();
         stats.health -= dmg;
         lastDmgTime = Time.time;
         UpdateHUD();
@@ -61,6 +70,7 @@ public class Player : MonoBehaviour {
     public void DrainMana(float m)
     {
         stats.mana -= m;
+        if (stats.mana < 0f) stats.mana = 0f;
         UpdateHUD();
     }
 
@@ -70,6 +80,7 @@ public class Player : MonoBehaviour {
         manaSlider.value = stats.mana / attributes.maxMana;
     }
 
+    #region Regeneration of health / mana
     void RegenHealth()
     {
 
@@ -94,11 +105,17 @@ public class Player : MonoBehaviour {
 
         UpdateHUD();
     }
-
+    #endregion
 
     public void OnNotEnoughMana()
     {
+        audio.PlayOneShot(outOfManaSound);
         //TODOO
+    }
+
+    public void OnDamageTaken()
+    {
+        audio.PlayOneShot(owSounds[Random.Range(0, owSounds.Count)],0.8f);
     }
 
 }
