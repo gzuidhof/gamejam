@@ -9,7 +9,7 @@ public class Enemy : MonoBehaviour {
     public AudioClip deathSound;
 
     private TweenScale scaleT;
-
+    public float startScale = 1f;
 
     private float startHealth;
 
@@ -36,14 +36,19 @@ public class Enemy : MonoBehaviour {
             audio.PlayOneShot(owSound);
         
         //transform.localScale = Vector3.one * (stats.health / startHealth);
-        scaleT.Reset();
-        scaleT.from = Vector3.one * (stats.health / startHealth);
+        if (scaleT)
+        {
+            scaleT.Reset();
+            scaleT.from = Vector3.one * startScale * (stats.health / startHealth);
+        }
 
         stats.health -= dmg;
 
-
-        scaleT.to = Vector3.one * (stats.health / startHealth);
-        scaleT.Play();
+        if (scaleT)
+        {
+            scaleT.to = Vector3.one * startScale * (stats.health / startHealth);
+            scaleT.Play();
+        }
 
         if (stats.health <= 0f)
             Die();

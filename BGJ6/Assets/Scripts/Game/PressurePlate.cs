@@ -48,8 +48,13 @@ public class PressurePlate : MonoBehaviour {
 
     void Update()
     {
+
+        List<Collider> toR = new List<Collider>();
         foreach (Collider c in inTrigger)
-            if (!c) OnTriggerExit(c);
+            if (!c) toR.Add(c);
+
+        foreach (Collider c in toR)
+                OnTriggerExit(c);
 
     }
 

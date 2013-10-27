@@ -27,7 +27,7 @@ public class Spawner : MonoBehaviour {
         if (active && Time.time - lastSpawnTime > interval && prefab && spawned.Count < maxAmount)
         {
             lastSpawnTime = Time.time;
-            GameObject go = (GameObject) Instantiate(prefab, transform.position, new Quaternion());
+            GameObject go = (GameObject) Instantiate(prefab, transform.position + new Vector3(Random.value,0,Random.value).normalized*1.5f , new Quaternion());
             spawned.Add(go);
 
             if (spawnSound)
