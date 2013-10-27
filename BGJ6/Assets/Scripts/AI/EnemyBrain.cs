@@ -12,6 +12,9 @@ public class EnemyBrain : MonoBehaviour {
     public MeleeWeapon weapon;
     public RangedWeapon rWeapon;
 
+    [HideInInspector]
+    public float lastDisableTime;
+
     private float baseSpeed;
 
 
