@@ -29,6 +29,7 @@ public class Projectile : MonoBehaviour {
 
     void OnTriggerEnter(Collider c)
     {
+        if (c.isTrigger) return;
         if (!gameObject) return;
         if (string.Equals(c.transform.root.tag, firedBy)) return;
 
