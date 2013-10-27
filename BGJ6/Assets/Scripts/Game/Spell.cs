@@ -27,7 +27,8 @@ public class Spell : MonoBehaviour {
             s.gameObject.SetActive(false);
 
         gameObject.SetActive(true);
-        selectedSpellIcon.GetComponent<UISprite>().spriteName = spellName;
+        if (selectedSpellIcon.GetComponent<UISprite>())
+            selectedSpellIcon.GetComponent<UISprite>().spriteName = spellName;
         
         //TODO Why is this not working
         foreach (UITweener t in selectedSpellIcon.GetComponents<UITweener>())

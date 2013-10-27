@@ -34,9 +34,10 @@ public class Checkpoint : MonoBehaviour {
 
     public void Respawn()
     {
-        Application.LoadLevel(0);
         p.transform.position = transform.position;
         p.stats.health = p.attributes.maxHealth;
+       // Application.LoadLevel(0);
+        
         p.UpdateHUD();
     }
 
