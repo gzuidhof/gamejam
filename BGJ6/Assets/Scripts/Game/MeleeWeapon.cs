@@ -68,6 +68,12 @@ public class MeleeWeapon : MonoBehaviour {
         List<Enemy> toBeRemoved = new List<Enemy>();
         foreach (Enemy enemy in Enemy.enemies)
         {
+            if (!enemy)
+            {
+                toBeRemoved.Add(enemy);
+                continue;
+
+            }
             if (Vector3.Distance(enemy.transform.position, transform.position) < range
                 && Vector3.Angle(transform.root.forward, enemy.transform.position - transform.root.position) < angle / 1.9f)
                 enemy.DealDamage(dmg);

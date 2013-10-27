@@ -5,7 +5,7 @@ public class Spawner : MonoBehaviour {
 
 
     public GameObject prefab;
-    public bool active;
+    public new bool active;
     public float interval;
     private float lastSpawnTime;
     public Transform moveToOnSpawn;
