@@ -30,10 +30,10 @@ public class Enemy : MonoBehaviour {
 	
 	}
 
-    public void DealDamage(float dmg)
+    public void DealDamage(float dmg, bool noSound = false)
     {
-        
-        audio.PlayOneShot(owSound);
+        if (!noSound)
+            audio.PlayOneShot(owSound);
         
         //transform.localScale = Vector3.one * (stats.health / startHealth);
         scaleT.Reset();
