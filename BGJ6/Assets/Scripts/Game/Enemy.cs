@@ -59,7 +59,7 @@ public class Enemy : MonoBehaviour {
     public void Die()
     {
         AudioSource.PlayClipAtPoint(deathSound, transform.position, 0.9f);
-        Destroy(transform.root.gameObject);
+        Destroy(transform.gameObject);
         alive = false;
     }
 

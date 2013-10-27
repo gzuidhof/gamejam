@@ -5,7 +5,6 @@ using System.Collections.Generic;
 [RequireComponent(typeof(TweenRotation))]
 public class MeleeWeapon : MonoBehaviour {
 
-
     private bool swinging = false;
 
     public bool playerWeapon;
@@ -45,13 +44,14 @@ public class MeleeWeapon : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
+        player = GameObject.FindGameObjectWithTag("Player").transform;
         tween = GetComponent<TweenRotation>();
 	}
 	
 	// Update is called once per frame
 	void Update () {
 
-        if (playerWeapon && Input.GetKey(Bindings.Get(Bindings.Key.Fire)))
+        if (playerWeapon && Input.GetKey(Bindings.Get(Bindings.Key.Fire)) && !UICamera.inputHasFocus)
             Swing();
 	}
 

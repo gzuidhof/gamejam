@@ -39,8 +39,8 @@
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
      inkscape:zoom="1.4"
-     inkscape:cx="544.2969"
-     inkscape:cy="815.05339"
+     inkscape:cx="559.2969"
+     inkscape:cy="820.72116"
      inkscape:document-units="px"
      inkscape:current-layer="layer1-5"
      showgrid="false"
@@ -57,7 +57,7 @@
         <dc:format>image/svg+xml</dc:format>
         <dc:type
            rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-        <dc:title></dc:title>
+        <dc:title />
       </cc:Work>
     </rdf:RDF>
   </metadata>
@@ -202,7 +202,10 @@
            x="377.67856"
            y="384.14789" /></text>
       <g
-         id="g4348">
+         id="g4348"
+         inkscape:export-filename="C:\Users\Guido\Documents\GitHub\gamejam\BGJ6\Assets\Texture\GUI\Spells\Violet.png"
+         inkscape:export-xdpi="96.347343"
+         inkscape:export-ydpi="96.347343">
         <path
            sodipodi:type="arc"
            style="fill:#f0f0f0;fill-opacity:1;fill-rule:nonzero;stroke:none"
@@ -315,7 +318,10 @@
          id="g6032" />
       <g
          id="g4300"
-         transform="translate(-22.857143,-32.857143)">
+         transform="translate(-22.857143,-32.857143)"
+         inkscape:export-filename="C:\Users\Guido\Documents\GitHub\gamejam\BGJ6\Assets\Texture\GUI\Spells\Green.png"
+         inkscape:export-xdpi="97.785858"
+         inkscape:export-ydpi="97.785858">
         <path
            sodipodi:type="arc"
            style="fill:#f0f0f0;fill-opacity:1;fill-rule:nonzero;stroke:none"
@@ -624,7 +630,10 @@
            inkscape:connector-curvature="0" />
       </g>
       <g
-         id="g4324">
+         id="g4324"
+         inkscape:export-filename="C:\Users\Guido\Documents\GitHub\gamejam\BGJ6\Assets\Texture\GUI\Spells\Red.png"
+         inkscape:export-xdpi="96.347343"
+         inkscape:export-ydpi="96.347343">
         <path
            transform="matrix(2.7235344,0,0,2.7235344,-609.05769,-5016.5962)"
            d="m 406.47229,1996.899 c 0,15.1539 -12.28463,27.4385 -27.43848,27.4385 -15.15385,0 -27.43847,-12.2846 -27.43847,-27.4385 0,-15.1538 12.28462,-27.4384 27.43847,-27.4384 C 394.18766,1969.4606 406.47229,1981.7452 406.47229,1996.899 Z"
@@ -726,7 +735,10 @@
         </g>
       </g>
       <g
-         id="g4360">
+         id="g4360"
+         inkscape:export-filename="C:\Users\Guido\Documents\GitHub\gamejam\BGJ6\Assets\Texture\GUI\Spells\Blue.png"
+         inkscape:export-xdpi="83.942368"
+         inkscape:export-ydpi="83.942368">
         <g
            inkscape:export-ydpi="244.8425"
            inkscape:export-xdpi="244.8425"
@@ -928,7 +940,10 @@
            transform="translate(10.178571,0.17857143)" />
       </g>
       <g
-         id="g4384">
+         id="g4384"
+         inkscape:export-filename="C:\Users\Guido\Documents\GitHub\gamejam\BGJ6\Assets\Texture\GUI\Spells\Yellow.png"
+         inkscape:export-xdpi="89.119324"
+         inkscape:export-ydpi="89.119324">
         <path
            sodipodi:type="arc"
            style="fill:#f0f0f0;fill-opacity:1;fill-rule:nonzero;stroke:none"

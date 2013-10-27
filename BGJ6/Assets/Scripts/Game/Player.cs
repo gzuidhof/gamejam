@@ -31,6 +31,11 @@ public class Player : MonoBehaviour {
     public UISlider healthSlider;
     public UISlider manaSlider;
 
+    public GameObject selectedSpell;
+
+
+
+
 
 
 	// Use this for initialization

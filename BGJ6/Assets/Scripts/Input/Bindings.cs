@@ -22,6 +22,7 @@ public class Bindings : MonoBehaviour
     private KeyCode[] binds = 
         {KeyCode.W, KeyCode.S, KeyCode.A, KeyCode.D, 
         KeyCode.Mouse0,
+        KeyCode.Alpha1, KeyCode.Alpha2, KeyCode.Alpha3, KeyCode.Alpha4, KeyCode.Alpha5,
         KeyCode.E,
         KeyCode.Escape};
 
@@ -29,6 +30,7 @@ public class Bindings : MonoBehaviour
     {
         Forward = 0, Backward, Left, Right,
         Fire, 
+        Spell1, Spell2, Spell3, Spell4, Spell5,
          Use,
         Menu
     }
