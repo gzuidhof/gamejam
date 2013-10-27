@@ -6,6 +6,9 @@ public class TriggerActivate : MonoBehaviour {
     public GameObject target;
     public string feedback;
 
+    public bool theEnd;
+
+
     void OnTriggerEnter(Collider c)
     {
         if (!gameObject) return;
@@ -25,7 +28,8 @@ public class TriggerActivate : MonoBehaviour {
                 if (!string.IsNullOrEmpty(feedback))
                 {
                     Debug.Log("Sending user feedback");
-                    GUIFeedback.instance.ShowText(feedback);
+                    
+                    GUIFeedback.instance.ShowText(feedback, theEnd ? 20f: 5f);
                 }
 
                 Destroy(gameObject);

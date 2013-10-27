@@ -15,12 +15,12 @@ public class GUIFeedback : MonoBehaviour {
 
 	}
 
-    public void ShowText(string s)
+    public void ShowText(string s, float dur)
     {
         Debug.Log("Showing text");
         alpha.Play(true);
         label.text = s;
-        Invoke("HideText", 5f);
+        Invoke("HideText", dur);
     }
 
     public void HideText()
