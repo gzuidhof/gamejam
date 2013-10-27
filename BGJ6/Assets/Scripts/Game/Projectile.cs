@@ -8,6 +8,7 @@ public class Projectile : MonoBehaviour {
     public AudioClip hitSound;
     public AudioClip fireSound;
     public string firedBy; //String of tag who fired
+    public float lifeTime = 5f;
 
 
     public void Fire(Vector3 from, Vector3 forward, string firedBy)
@@ -16,7 +17,7 @@ public class Projectile : MonoBehaviour {
         rigidbody.velocity = forward * speed;
         AudioSource.PlayClipAtPoint(fireSound, from);
         this.firedBy = firedBy;
-        Invoke("Remove", 5f);
+        Invoke("Remove", lifeTime);
     }
 
 
