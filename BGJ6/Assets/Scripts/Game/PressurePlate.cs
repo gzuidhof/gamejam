@@ -45,4 +45,12 @@ public class PressurePlate : MonoBehaviour {
        // }
 
     }
+
+    void Update()
+    {
+        foreach (Collider c in inTrigger)
+            if (!c) OnTriggerExit(c);
+
+    }
+
 }

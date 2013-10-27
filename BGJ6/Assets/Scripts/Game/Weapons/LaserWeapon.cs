@@ -37,7 +37,7 @@ public class LaserWeapon : MonoBehaviour {
                 PlaySounds(true);
                 c.transform.root.GetComponent<Player>().DealDamage(dmg*Time.deltaTime);
             }
-            else if (c.transform.root.tag == "Enemy" && c.GetComponent<Enemy>() != null)
+            else if (c.transform.root.tag == "Enemy" && c.GetComponent<Enemy>() != null && c.GetComponent<NavMeshAgent>() != null)
             {
                 PlaySounds(true);
                 //Debug.Log("Dealing Damage");
