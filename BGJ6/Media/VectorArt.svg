@@ -18,6 +18,13 @@
    sodipodi:docname="VectorArt.svg">
   <defs
      id="defs4">
+    <inkscape:perspective
+       sodipodi:type="inkscape:persp3d"
+       inkscape:vp_x="-372.04724 : 175.3937 : 0"
+       inkscape:vp_y="0 : 1000 : 0"
+       inkscape:vp_z="651.56131 : 572.35422 : 1"
+       inkscape:persp3d-origin="279.51407 : 396.96052 : 1"
+       id="perspective5068" />
     <linearGradient
        osb:paint="gradient"
        id="linearGradient5544">
@@ -38,9 +45,9 @@
      borderopacity="1.0"
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
-     inkscape:zoom="2.8"
-     inkscape:cx="145.8183"
-     inkscape:cy="712.63031"
+     inkscape:zoom="1.4"
+     inkscape:cx="466.21317"
+     inkscape:cy="867.70938"
      inkscape:document-units="px"
      inkscape:current-layer="layer1-5"
      showgrid="false"
@@ -208,7 +215,8 @@
          id="g4348"
          inkscape:export-filename="C:\Users\Guido\Documents\GitHub\gamejam\BGJ6\Assets\Texture\GUI\Spells\Violet.png"
          inkscape:export-xdpi="96.347343"
-         inkscape:export-ydpi="96.347343">
+         inkscape:export-ydpi="96.347343"
+         transform="translate(-184.06058,-19.418262)">
         <path
            sodipodi:type="arc"
            style="fill:#f0f0f0;fill-opacity:1;fill-rule:nonzero;stroke:none"
@@ -321,7 +329,7 @@
          id="g6032" />
       <g
          id="g4300"
-         transform="translate(-22.857143,-32.857143)"
+         transform="translate(-332.27317,-24.039106)"
          inkscape:export-filename="C:\Users\Guido\Documents\GitHub\gamejam\BGJ6\Assets\Texture\GUI\Spells\Green.png"
          inkscape:export-xdpi="97.785858"
          inkscape:export-ydpi="97.785858">
@@ -636,7 +644,8 @@
          id="g4324"
          inkscape:export-filename="C:\Users\Guido\Documents\GitHub\gamejam\BGJ6\Assets\Texture\GUI\Spells\Red.png"
          inkscape:export-xdpi="96.347343"
-         inkscape:export-ydpi="96.347343">
+         inkscape:export-ydpi="96.347343"
+         transform="translate(-282.45846,-20.846762)">
         <path
            transform="matrix(2.7235344,0,0,2.7235344,-609.05769,-5016.5962)"
            d="m 406.47229,1996.899 c 0,15.1539 -12.28463,27.4385 -27.43848,27.4385 -15.15385,0 -27.43847,-12.2846 -27.43847,-27.4385 0,-15.1538 12.28462,-27.4384 27.43847,-27.4384 C 394.18766,1969.4606 406.47229,1981.7452 406.47229,1996.899 Z"
@@ -741,7 +750,8 @@
          id="g4360"
          inkscape:export-filename="C:\Users\Guido\Documents\GitHub\gamejam\BGJ6\Assets\Texture\GameIcon.png"
          inkscape:export-xdpi="268.61557"
-         inkscape:export-ydpi="268.61557">
+         inkscape:export-ydpi="268.61557"
+         transform="matrix(0.90578377,0,0,0.90578377,-223.74575,21.050015)">
         <g
            inkscape:export-ydpi="244.8425"
            inkscape:export-xdpi="244.8425"
@@ -946,7 +956,8 @@
          id="g4384"
          inkscape:export-filename="C:\Users\Guido\Documents\GitHub\gamejam\BGJ6\Assets\Texture\GUI\Spells\Yellow.png"
          inkscape:export-xdpi="89.119324"
-         inkscape:export-ydpi="89.119324">
+         inkscape:export-ydpi="89.119324"
+         transform="translate(-227.88861,-38.567615)">
         <path
            sodipodi:type="arc"
            style="fill:#f0f0f0;fill-opacity:1;fill-rule:nonzero;stroke:none"
@@ -1098,54 +1109,53 @@
            d="m 290.98216,587.54077 c 0,0.98622 -0.7995,1.78572 -1.78572,1.78572 -0.98622,0 -1.78571,-0.7995 -1.78571,-1.78572 0,-0.98622 0.79949,-1.78571 1.78571,-1.78571 C 290.18266,585.75506 290.98216,586.55455 290.98216,587.54077 Z" />
       </g>
       <rect
-         style="fill:#fff6d5;fill-opacity:0.50819671;stroke:none;opacity:0.6"
+         style="opacity:0.6;fill:#fff6d5;fill-opacity:0.50819672;stroke:none"
          id="rect4198"
          width="62.629459"
          height="2.0203052"
-         x="121.84965"
-         y="332.88104"
-         transform="translate(-215.60916,182.74911)"
+         x="-98.305199"
+         y="297.94229"
          inkscape:export-filename="C:\Users\Guido\Documents\GitHub\gamejam\BGJ6\Assets\Materials\Programmer Art\Laser.png"
          inkscape:export-xdpi="268.61557"
          inkscape:export-ydpi="268.61557" />
       <rect
-         y="517.65045"
-         x="-93.759514"
+         y="299.96259"
+         x="-98.305199"
          height="1.8940361"
          width="62.629459"
          id="rect4200"
-         style="fill:#ffe680;fill-opacity:0.71038252;stroke:none;opacity:0.6"
+         style="opacity:0.6;fill:#ffe680;fill-opacity:0.7103825;stroke:none"
          inkscape:export-filename="C:\Users\Guido\Documents\GitHub\gamejam\BGJ6\Assets\Materials\Programmer Art\Laser.png"
          inkscape:export-xdpi="268.61557"
          inkscape:export-ydpi="268.61557" />
       <rect
-         style="fill:#ffd42a;fill-opacity:1;stroke:none;opacity:0.6"
+         style="opacity:0.6;fill:#ffd42a;fill-opacity:1;stroke:none"
          id="rect4202"
          width="62.629459"
          height="1.8940361"
-         x="-93.759514"
-         y="519.54449"
+         x="-98.305199"
+         y="301.85663"
          inkscape:export-filename="C:\Users\Guido\Documents\GitHub\gamejam\BGJ6\Assets\Materials\Programmer Art\Laser.png"
          inkscape:export-xdpi="268.61557"
          inkscape:export-ydpi="268.61557" />
       <rect
-         y="-525.35284"
-         x="-93.759514"
+         y="-307.66498"
+         x="-98.305199"
          height="2.0203052"
          width="62.629459"
          id="rect4204"
-         style="fill:#fff6d5;fill-opacity:0.50819672;stroke:none;opacity:0.6"
+         style="opacity:0.6;fill:#fff6d5;fill-opacity:0.50819672;stroke:none"
          transform="scale(1,-1)"
          inkscape:export-filename="C:\Users\Guido\Documents\GitHub\gamejam\BGJ6\Assets\Materials\Programmer Art\Laser.png"
          inkscape:export-xdpi="268.61557"
          inkscape:export-ydpi="268.61557" />
       <rect
-         style="fill:#ffe680;fill-opacity:0.7103825;stroke:none;opacity:0.6"
+         style="opacity:0.6;fill:#ffe680;fill-opacity:0.7103825;stroke:none"
          id="rect4206"
          width="62.629459"
          height="1.8940361"
-         x="-93.759514"
-         y="-523.33258"
+         x="-98.305199"
+         y="-305.64471"
          transform="scale(1,-1)"
          inkscape:export-filename="C:\Users\Guido\Documents\GitHub\gamejam\BGJ6\Assets\Materials\Programmer Art\Laser.png"
          inkscape:export-xdpi="268.61557"

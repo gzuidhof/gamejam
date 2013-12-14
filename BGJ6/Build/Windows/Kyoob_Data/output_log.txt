@@ -1,0 +1,65 @@
+Initialize engine version: 4.2.0f4 (38efbd14869d)
+GfxDevice: creating device client; threaded=1
+Direct3D:
+    Version:  Direct3D 11.0 [level 11.0]
+    Renderer: NVIDIA GeForce GTX 760 (ID=0x1187)
+    Vendor:   NVIDIA
+    VRAM:     1990 MB
+Begin MonoManager ReloadAssembly
+Platform assembly: C:\Users\Guido\Documents\GitHub\gamejam\BGJ6\Build\Windows\Kyoob_Data\Managed\UnityEngine.dll (this message is harmless)
+Loading C:\Users\Guido\Documents\GitHub\gamejam\BGJ6\Build\Windows\Kyoob_Data\Managed\UnityEngine.dll into Unity Child Domain
+Platform assembly: C:\Users\Guido\Documents\GitHub\gamejam\BGJ6\Build\Windows\Kyoob_Data\Managed\Assembly-CSharp-firstpass.dll (this message is harmless)
+Loading C:\Users\Guido\Documents\GitHub\gamejam\BGJ6\Build\Windows\Kyoob_Data\Managed\Assembly-CSharp-firstpass.dll into Unity Child Domain
+Platform assembly: C:\Users\Guido\Documents\GitHub\gamejam\BGJ6\Build\Windows\Kyoob_Data\Managed\Assembly-CSharp.dll (this message is harmless)
+Loading C:\Users\Guido\Documents\GitHub\gamejam\BGJ6\Build\Windows\Kyoob_Data\Managed\Assembly-CSharp.dll into Unity Child Domain
+- Completed reload, in  0.030 seconds
+desktop: 1680x1050 60Hz; virtual: 2960x1050 at 0,0
+<RI> Initializing input.
+<RI> Input initialized.
+[mecanim]: BindSkeleton: cannot find Transform 'polySurface357_MeshPart0'
+ 
+(Filename:  Line: 1487)
+
+[mecanim]: BindSkeleton: cannot find Transform 'polySurface357_MeshPart1'
+ 
+(Filename:  Line: 1487)
+
+Sending user feedback
+ 
+(Filename: C:/BuildAgent/work/cac08d8a5e25d4cb/Runtime/ExportGenerated/StandalonePlayer/UnityEngineDebug.cpp Line: 54)
+
+Showing text
+ 
+(Filename: C:/BuildAgent/work/cac08d8a5e25d4cb/Runtime/ExportGenerated/StandalonePlayer/UnityEngineDebug.cpp Line: 54)
+
+Sending user feedback
+ 
+(Filename: C:/BuildAgent/work/cac08d8a5e25d4cb/Runtime/ExportGenerated/StandalonePlayer/UnityEngineDebug.cpp Line: 54)
+
+Showing text
+ 
+(Filename: C:/BuildAgent/work/cac08d8a5e25d4cb/Runtime/ExportGenerated/StandalonePlayer/UnityEngineDebug.cpp Line: 54)
+
+Sending user feedback
+ 
+(Filename: C:/BuildAgent/work/cac08d8a5e25d4cb/Runtime/ExportGenerated/StandalonePlayer/UnityEngineDebug.cpp Line: 54)
+
+Showing text
+ 
+(Filename: C:/BuildAgent/work/cac08d8a5e25d4cb/Runtime/ExportGenerated/StandalonePlayer/UnityEngineDebug.cpp Line: 54)
+
+Sending user feedback
+ 
+(Filename: C:/BuildAgent/work/cac08d8a5e25d4cb/Runtime/ExportGenerated/StandalonePlayer/UnityEngineDebug.cpp Line: 54)
+
+Showing text
+ 
+(Filename: C:/BuildAgent/work/cac08d8a5e25d4cb/Runtime/ExportGenerated/StandalonePlayer/UnityEngineDebug.cpp Line: 54)
+
+NullReferenceException
+  at (wrapper managed-to-native) UnityEngine.GameObject:SetActive (bool)
+  at ShieldWeapon.TurnShieldOff () [0x00000] in <filename unknown>:0 
+  at ShieldWeapon.OnDisable () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
