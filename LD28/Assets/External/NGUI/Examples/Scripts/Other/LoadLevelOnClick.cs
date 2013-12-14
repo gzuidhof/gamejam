@@ -5,7 +5,7 @@ public class LoadLevelOnClick : MonoBehaviour
 {
 	public string levelName;
 
-	void OnClick ()
+	public void OnClick ()
 	{
 		if (!string.IsNullOrEmpty(levelName))
 		{
