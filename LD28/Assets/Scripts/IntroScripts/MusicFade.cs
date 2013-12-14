@@ -4,28 +4,37 @@ using System.Collections;
 public class MusicFade : MonoBehaviour {
 
     public float fadeSpeed;
-    public float maxVolume;
+    public float goalVolume;
+    public bool fadeIn = true;
+    public bool doOnStart = true;
 
 	// Update is called once per frame
 	void Start () {
-        StartFadeIn();
+        if (doOnStart) StartFade();
 	}
 
 
-    public void StartFadeIn()
+    public void StartFade()
     {
-        StartCoroutine("FadeIn");
+        StartCoroutine("Fade");
     }
 
-    IEnumerator FadeIn()
+    IEnumerator Fade()
     {
         while (true)
         { 
             yield return null;
-
-            audio.volume += Time.deltaTime * fadeSpeed;
-            if (audio.volume >= maxVolume)
-                StopCoroutine("FadeIn");
+            if (fadeIn) {
+                audio.volume += Time.deltaTime * fadeSpeed;
+                if (audio.volume >= goalVolume)
+                    StopCoroutine("Fade");
+            }
+            else
+            {
+                audio.volume -= Time.deltaTime * fadeSpeed;
+                if (audio.volume <= goalVolume)
+                    StopCoroutine("Fade");
+            }
         }
 
     }
