@@ -9,6 +9,7 @@ public class RocketControl : MonoBehaviour {
     public bool launched;
     public AudioClip launchDeniedSound;
 
+    public GameObject gameOver;
 
 	// Update is called once per frame
 	void FixedUpdate () {
@@ -18,6 +19,11 @@ public class RocketControl : MonoBehaviour {
         if (launched)
         {
             desiredVelocity = (transform.up * thrust);
+
+        }
+        else
+        {
+            return;
         }
 
         if (Input.GetKey(KeyCode.RightArrow))
@@ -48,5 +54,23 @@ public class RocketControl : MonoBehaviour {
         }
         
     }
+
+    void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (collision.gameObject.CompareTag("TriggerDeath")) 
+        {
+            GetComponent<SpriteRenderer>().enabled = false;
+            GetComponent<PolygonCollider2D>().enabled = false;
+            gameOver.SetActive(true);
+            Invoke("RestartLevel", 1.5f);
+        }
+
+    }
+
+    void RestartLevel()
+    {
+        Application.LoadLevel("rocket");
+    }
+
 
 }

@@ -8,6 +8,11 @@ public class DecoupleButton : MonoBehaviour {
     public static bool decoupled = false;
     public AudioClip decoupleDeniedSound;
 
+    public void Start()
+    {
+        decoupled = false;
+    }
+
     public void OnButton()
     {
         if (!decoupled)

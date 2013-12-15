@@ -9,7 +9,11 @@ public class LoadLevelOnClick : MonoBehaviour
 	{
 		if (!string.IsNullOrEmpty(levelName))
 		{
-			Application.LoadLevel(levelName);
+            Application.LoadLevel(levelName);
 		}
+
+
+
+
 	}
 }

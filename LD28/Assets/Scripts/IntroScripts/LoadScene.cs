@@ -9,8 +9,10 @@ using System.Collections;
 public class LoadScene : MonoBehaviour
 {
     public string levelName;
+    public string enableGameObject;
+
     public void Load()
     {
-        Application.LoadLevel(levelName);
+
     }
 }
