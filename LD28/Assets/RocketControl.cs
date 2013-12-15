@@ -9,6 +9,9 @@ public class RocketControl : MonoBehaviour {
     public bool launched;
     public AudioClip launchDeniedSound;
 
+    public GameObject launchEffect;
+
+
     public GameObject gameOver;
 
 	// Update is called once per frame
@@ -47,6 +50,7 @@ public class RocketControl : MonoBehaviour {
         {
             if (audio) audio.Play();
             launched = true;
+            launchEffect.SetActive(true);
         }
         else
         {
