@@ -3,6 +3,9 @@
 [Ll]ibrary/
 [Tt]emp/
 [Oo]bj/
+NGUI/
+External/
+
 
 *.csproj
 *.sln
